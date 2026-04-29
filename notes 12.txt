@@ -1,0 +1,1376 @@
+html:-
+=====
+	documentation
+	collections of html predefined elements or tag
+			<html>
+			<head>
+			<body>
+			<h1>
+			<p>
+			<form>
+			<input>
+			<article>
+			<aside>
+			<audio>
+			<video>
+	rules to write element or tags in html:-
+	======================================
+
+		<element></element> or <tag></tag>
+		<h1></h1> 
+		<mobile></mobile>
+		
+		1. only html predefined elements or tag
+		2. some html elements will have start tag and end tag
+					<element> - start tag
+					</element> - end tag
+		3. html elements contains
+				<p></p>
+				1. attribute(s)
+				   <p align="center" style="color:red" id="" class=""></p>	
+				
+				2. text content
+				   <p align="center">This is rajesh from chennai</p>
+				   <button>submit</button>
+				3. nested other html elements
+						<p>
+							<div></div>
+							<aside></aside>										</p>
+		4. html elements should be written in lowercase 
+					
+		5. some html elements are self closing tag
+					<br/>
+					<hr/>
+
+			attribute zero or more attribute
+					attribute -> name=value
+				
+			<elementname attributename=value></elementname>
+			
+				<h1></h1>
+
+				
+				
+				<html>
+					<head></head>
+					<body></body>
+				</html>
+				<h1>dhkjfshd sdfhsdkjfhsdkj dsfdskj</h1>
+				<p>jfkjdf sdfbskjdfhbkjk s dsfbjsdh</p>
+				<h2></h2>
+
+		Broswer - html parser will parses the html document content
+		- constructs an equivelent DOM tree struture for the paresed html document
+			- Html Parser
+			- CSS parser 
+			- DOM Tree
+			- javascript Engine - js code will be executed by js engine
+			- Rendering Engine - Will be displaying document 
+			
+
+
+
+===================================================================================================
+html -  basic of html, attribute
+css -  Applying styles for html elements 
+	   
+		selector {
+			name:value;       - style property - style rule
+			name:value;		 
+			name:value;
+		}
+	
+		inline style
+		internal style
+		external style
+
+		Selector - the style rules need to get applied what and which html element
+		css selector types:-
+		-------------------
+		1. element selector
+		2. class selector (.)
+		3. id selector (#)
+		4. multiple selector
+		5. descended selector
+		6. universal selector
+		7. css attribute selector
+		8. sudo selector
+
+js - variable:-
+==============
+		Browser
+	js --> javascript Engine --> Output 
+	js --> node js  --> Output 
+
+	Inline 
+	internal
+	external 
+	datatype 
+			   - primitive type
+				 number,string,null,undefined,boolean
+
+			   - composite types or reference type
+				 Array, Object, Date etc
+	static type
+			int x=10;
+	dynamic type
+		x=false;  //during the runtime js engine will decide the type base on the value is initialized 
+
+
+	js is not strict type language - DYNAMIC TYPING
+
+	 array - []	
+		 var a=[23,56,46,787];
+		 
+
+		iterate an array, manuplation . add an element, 
+		delete an element, filter an element
+
+	 object - {}
+				- object will have properties and behaviour
+
+				iterate an object, entries, keys, values
+	 methods
+		-> function declaration
+				 function add(a,b){  
+                			return a+b;
+        			 }
+		-> function expression	
+				var x=function add(a,b){  
+                 		return a+b;
+        			}
+		-> anonymous function
+				var x=function(a,b){ 
+                 		return a+b;
+        			}
+		
+		-> Arrow function
+				var x=(a,b)=> a+b;
+	
+	
+		function can be assigned to a variable
+
+	 callback methods:-
+			
+
+	 callback hell:-
+			var fetchData=(analyzingData)=>{
+				//logic of fetching data
+				analyzingData(filterData)
+				//logic of fetching data
+			}
+			var analyzingData=()=>{
+				//logic of analyzingData
+			}
+			var filterData=()=>{
+				//logic of analyzingData
+				//logic of analyzingData
+			}
+
+			var processData=(fetchData)=>{
+				console.log("prcessing data line 1")
+				console.log("prcessing data line 2")
+				fetchData(analyzingData);
+				console.log("prcessing data line 3")
+			
+			}
+			processData(fetchData);
+	promises:-
+	=========
+		we do promise - pending,resolved / fullfill, reject
+
+			
+
+
+
+
+	 Event handling
+				event source
+				event action listener
+
+	 Exception Handling - try catch finally
+
+DOM Manipulation:-
+==================
+	 Dom Manuplate - getElementById, byName, byTag, querySelector, querySelectorAll
+			create an one element attach with the exisiting DOM tree
+			Remove element from the DOM Tree
+			add or remove an attribute
+			add or remove a text node
+			add or remove style rules
+JavaScript provides a comprehensive set of methods for interacting with and manipulating the Document Object Model (DOM), allowing dynamic changes to the structure, content, and style of web pages.
+1. Element Selection Methods:
+	document.getElementById('id'): Selects a single element by its unique ID.
+	document.getElementsByClassName('className'): Returns an HTMLCollection of elements with a specific class name.
+	document.getElementsByTagName('tagName'): Returns an HTMLCollection of elements with a specific tag name.
+	document.querySelector('selector'): Returns the first element that matches a CSS selector.
+	document.querySelectorAll('selector'): Returns a NodeList of all elements that match a CSS selector.
+2. Element Creation and Insertion Methods:
+	document.createElement('tagName'): Creates a new HTML element.
+	parentNode.appendChild(childNode): Adds a child node to the end of a parent node's list of children.
+	parentNode.insertBefore(newNode, referenceNode): Inserts a new node before a specified reference node as a child of a parent node.
+	element.insertAdjacentHTML('position', htmlString): Inserts HTML content at a specified position relative to an element.
+3. Element Removal Methods:
+	parentNode.removeChild(childNode): Removes a specified child node from the DOM.
+	element.remove(): Removes the element itself from the DOM.
+4. Content and Attribute Manipulation Methods:
+	element.innerHTML: Gets or sets the HTML content within an element.
+	element.textContent: Gets or sets the text content of an element, stripping out any HTML tags.
+	element.setAttribute('attributeName', 'value'): Sets the value of an attribute on an element.
+	element.getAttribute('attributeName'): Gets the value of a specified attribute.
+	element.removeAttribute('attributeName'): Removes a specified attribute from an element.
+5. Style Manipulation Methods:
+	element.style.propertyName: Directly accesses and modifies individual CSS properties of an element.
+	element.classList.add('className'): Adds a class to an element's class list.
+	element.classList.remove('className'): Removes a class from an element's class list.
+	element.classList.toggle('className'): Toggles a class on and off.
+	element.classList.contains('className'): Checks if an element has a specific class.
+6. Event Handling Methods:
+	element.addEventListener('eventType', handlerFunction): Attaches an event listener to an element.
+	element.removeEventListener('eventType', handlerFunction): Removes an event listener from an element.
+	 
+	ES 6 - let, const, spread, Rest, Destructing an array, Destructure an js object, modules, classes, promises
+
+	
+	 typescript
+		
+     react
+	
+
+	
+
+	 Advanced JS
+		- classes
+		- object
+
+		- dynamic type - no datatype is needed to mentioned in the variable
+	
+		mavan - 
+		gradle - 
+
+===========================================================================================================================================		
+React:-
+		The library for web and native user interfaces
+		Create user interfaces from components
+		React lets you build user interfaces out of individual pieces called components. 
+		Create your own React components like navbar, footer,image gallery, Thumbnail, LikeButton, and Video. 
+		Then combine them into entire screens, pages, and apps.
+
+		
+		node js - Install the Environment
+		npm - node package manager     --- mvn
+
+		npx create-react-app appname
+		
+		js --> js engine(Engine)
+			   node js
+
+
+==================================================
+build tool - vite
+		npm create vite@latest
+		
+		cd projectfolder
+
+		npm install - node modules - node modules is going to have dependencies that are needed to 
+									 write, compile, run, test , deploy react application
+								   - package.json
+		npm run dev
+===================================================
+html
+	element 
+	html 5 - section, haeder, navbar, video, audio
+	attribute
+	forms - all input controls
+	
+css
+	style rule
+	types of stylesheet
+		1. inline
+		2. internal
+		3. external 
+
+	css selector - element, id, class, etc
+	
+	Bootstrap frameworks
+	
+js
+	datatypes
+	js array and objects
+	how to iterate array vs object
+	Arrays method
+	Object method
+	functions
+		1. nammed function
+			function name(){
+			}
+			let x= function name(){
+			}
+		2. anonymous function
+			
+			let x= function(){ 
+			}
+
+			let y=()=>{   v// arrow function
+			}
+	map function
+	filter function
+	Dom Tree
+	DOM manipulation method
+	event handling
+	ES-6 features:-
+
+		javascript - ECMA script -2015 - ES 6
+		let,const,Arrow Function, String literal, destructuring, spread, rest operator	
+		let, const:-
+			
+		Arrow Function:
+			  1. remove function keyword
+       			  2. remove the function name
+        		  3. as an arg if u have only one arg the u can remove ()
+        		  4. after the arg add arrow operator
+        		  5. if arrow function body has only one statement the u can remove the {} braces
+        		  6. if arrow function body has only one statement that too it is return statement
+           			then u cam remove the return keyword
+	JavaScript Object Destructuring is the syntax for extracting values from an object property and assigning them to a variable. 
+	The destructuring is also possible for JavaScript Arrays.
+
+	spread operator	
+		Spread syntax helps us clone an object with the most straightforward syntax using the curly braces and three dots 		{...}.
+		With spread syntax we can clone, update, and merge objects in an immutable way.
+		spread syntax helps expand or spread elements and properties
+	Rest Operator:-
+		The Rest parameter is kind of opposite to the spread syntax. While spread syntax helps expand or spread elements and 		properties, 
+		the rest parameter helps collect them together.		
+		const {age, ...rest} = user;
+ts
+
+react
+
+
+javascript vs typescript
+
+JavaScript:
+Uses dynamic typing, meaning the type of a variable is determined at runtime. 
+This can lead to runtime errors and makes large projects harder to maintain. 
+			let x;
+			x=10; //number
+			x='cts' //string
+			x=false //boolean
+
+		Event handling:-
+		===============	
+				Event Source
+				Event object - type of event
+				Event Action Listener 
+
+				When user interacts with the web pages events will get created
+				Add an action Listener
+				Button
+				Click  --> onclick --> java script (ActionListener)
+
+				<button onclick="buttonClicked()">Click</button>
+			
+				function buttonClicked(){
+						//action
+				}
+
+				dropdown --> onchange ---> java script (ActionListener)
+
+				key --> keyup -->  java script (ActionListener)
+	
+
+		js advanced concepts:-
+			js - single threaded - synchronous 
+			Asynchronus code:-
+			1. AJAX - Asynchronous Javacript xml 
+			2. setTimeout(), setInterval()
+			3. callbacks
+			4. promises - then catch
+			5. async await
+
+
+	Promise with then catch:-
+	=======================
+		<script>
+        		console.log("Line1");
+        
+        		var user = { name:"anil",place:"chennai", office:"cts",job:"developer"}
+        		var promise=new Promise((resolve,reject)=>{
+            			if(user!=null){
+                			resolve(user);
+            			}else{
+                			reject("user data is not found");
+            			}
+        		});
+          		console.log("Line2");
+        		promise
+        	     		.then((data)=>{
+        	         		console.log(data);
+        	         		var x=document.querySelector('p')
+        	         		console.log(x);
+                
+        	         		x.textContent="Name is:"+data.name+"Place is: 								"+data.place+"Office name is: 										"+data.office+"Jobs is: "+data.job;
+        	     		})
+        	    		.catch((err)=>{console.log("promise is caled and rejected"+err);})
+          			console.log("Line4");
+            			console.log("Line5");
+    		</script>
+
+	Synchronous vs Asynchronous:-
+	============================
+				
+			
+
+
+
+
+
+			
+
+	promise with async and await:-
+	=============================
+		<script>
+        		console.log("Line1");
+        
+        		var user = { name:"anil",place:"chennai", office:"cts",job:"developer"}
+        		var promise=new Promise((resolve,reject)=>{
+            			if(user!=null){
+                			resolve(user);
+            			}else{
+                			reject("user data is not found");
+            			}
+        		});
+          		console.log("Line2");
+        		// to avoid promise then catch we can async await method
+        		async function fetchData(){
+            		try{
+                		var data=await promise;
+                		var x=document.querySelector('p')            
+                		x.textContent="Name is:"+data.name+"Place is: "+data.place+"Office name 				is: "+data.office+"Jobs is: "+data.job;
+            		}catch(err){
+                		console.log(err);
+                	}
+        	}
+        	fetchData();
+          		console.log("Line4");
+            		console.log("Line5");
+    		</script>
+
+	External Api call:-
+	==================
+			Fetch API:-
+				
+				fetch(url) -> promise
+					.then()
+					.catch(29
+
+			 fetch("https://dummyjson.com/todos")
+            .then((response)=>{
+                console.log(response);
+                return response.json()
+            })
+            .then((todos)=>{
+                var ol = document.createElement('ol');
+              for (const todo of todos.todos) {
+                console.log(todo.todos);
+                var li=document.createElement('li');
+                li.textContent=todo.todo;
+                ol.appendChild(li);
+
+                
+              }  
+              var div=document.getElementById('content');
+              div.append(ol);
+              
+            })
+            .catch((err)=>{console.log(err);
+            })
+   	 </script>
+
+GIT NOTES:-
+===========
+	version control system / source code management system
+	project
+		initial document 1.0 - supervisor
+		version 2.0 - supervisor
+		version 3.0 - review
+		version 4.0 
+		version 5.0
+				hod
+		
+	git init - The git init command is used to initialize a new Git repository
+
+		   It prepares a new directory to be used for version control by Git, 
+		   creating the necessary data structures (referred to as a .git directory) that store the repository's configuration and history.
+		
+  		  The .git directory structure
+			HEAD: The HEAD file is a reference to the current branch that's checked out
+			config: This file contains repository-specific configuration settings - 
+					user info, remote url, branch config
+			objects/:- The objects directory stores all the data for your commits - 
+					files, commit tree structure,data will be stored in compressed format
+			refs/: The refs directory contains references to commit objects in the repository,
+			hooks/:- used for git collabration workflow
+			index: The index file acts as the staging area ("index") for Git 
+	Git config:- to set username and email who is using the git
+
+		git config user.name "Your Name"
+		git config user.email "youremail@example.com"
+
+	Git config --list:- list u git configuration details
+
+	git add:-  adds a change in the working directory to the staging area
+	git commit:- captures a snapshot of the project's currently staged changes. a commit is a snapshot of your 		     repo at a specific point in time.
+		     
+
+	git clone:- is used to copy an existing repository
+	POD Team - project name
+	=======================
+		1. Rajesh (POD team leader)
+		2. yash
+		3. bhuvan
+	
+		
+
+	Git workflow / Git Collaberation:-
+	=================================
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+React Application
+		js	
+		ts
+
+	javascript - nodejs & npm
+		   - packages	
+		
+	Project management tool - React - vite
+						- java - maven
+	React Virtual DOM:-
+	=================
+		- improves the speed 
+		- create virtal DOM. any update happens virtual. it creates an new virtual DOM
+		- compare the older virtual DOM newly constructed virtual DOM
+		- any difference is there and the same get updated to browser Actual DOM
+
+
+	JSX
+	===
+	creating an application using js and typescript
+
+
+
+
+	TypeScript:
+	ts is a superset of js
+
+	Uses static typing, which means the type of a variable is checked at compile time. 
+	This helps catch errors early and improves code robustness. 
+				
+	let x:number;      variable:datatype=value
+	x=10; //ok
+	x='cts' - error //string
+	x=false -  error //boolean
+	
+	js ----> js engine(Browser) ----> output
+
+		
+		    (Babel)    
+	ts-----> transpiler -----> js -----> js Engine(Browser)----> output
+			(tsc)
+
+typescript:- (OOP)
+	1. static typing 
+	2. interface
+	3. classes
+	4. Enum
+	5. Generics
+	6. Union 
+	7. Type Guards
+	8. Type Inference
+			let x;
+			x=40; //number
+	9.  Optional Chaining
+	10. Decorators (Angular)
+			
+	React Components:-
+	==================
+		- basic building block of any react application
+		- component is nothing but its a function or it's a class that return a portion UI
+		Two types of components:-
+		1. functional component
+		2. class component
+		
+	React State:-
+	============
+		UI - Data
+			static data - inside the html elements
+			dynamic data - written as js {}
+
+		inside the component
+			if u create your data inside the variable in react app
+			mutate 
+	props
+	=====
+		props - data
+		props can be written as attribute key={value}
+
+	
+	LifeCycle methods:-
+		Mounting Phase:-
+	
+			constructor()
+			render()
+			componentDidMount()
+		
+		Updating phase:- props or state gets updated
+			render()
+			componentDidUpdate()
+		
+		unmounting phase:-
+			componentWillUnmount()
+		lifecycle methods cannot be implemented inside the functional component till react 16.
+		from react 16 onwards u can implement lifecycle methods inside the using react hooks'			useEffect(()=>{}) - useeffect will be called multiple times
+		useEffect(()=>{},[]) - useeffect will call only once
+		useEffect(()=>{},[statevariable,statevariable]) - useeffect will called for every update
+								that listed in state variable
+
+		Arrays.map(), filter(), reduce(), slice(), forEach()
+						let scores=[34,45,48,12,23,46];
+		new array with transformed value=scores.map((48)=>{return 48+50}); // transform
+		[84,95,98]
+
+		Insurance
+				insurance plans - json data --> map function display that into 
+				react component
+
+				npm install -g json-server
+				
+				json-server localserver url:port
+				[
+					{
+						"vId":34567,
+						"vName":"Family Saving Plan",
+						"vPremium":5674,
+						"vYears":15
+					},
+					{
+						"planId":34567,
+						"planName":"Family Saving Plan",
+						"premium":5674,
+						"years":15
+					},
+					{
+						"planId":34567,
+						"planName":"Family Saving Plan",
+						"premium":5674,
+						"years":15
+					}
+				]
+
+		React routing:-
+		=============
+			- single page application
+			- 
+			
+		React Form Validation:-
+		======================
+			
+			1. Controlled form validation (Virtual DOM)
+			2. Uncontrolled form validation (DOM )
+				
+			React form js validation 
+				1. form input controls
+				2. state variable
+				3. error state variable, isValid is state variable
+				4. form submission
+				5. validation logic
+				6. error messages
+			Third party form handling and validation library:-
+			================================================	
+			form handling:-
+			-------------
+			React Form Hook
+			Formik
+			validation
+			----------
+			Yup
+
+			React Form Hook:-
+			===============
+				1. install the react form hook
+					npm install react-hook-form
+				
+
+
+
+		
+		#include<stdio.h> - header file - scanf(){} , printf(){}	
+		void main(){
+			scanf()
+			printf();
+		}
+		
+		JRE System library
+			jars
+			  packages
+				classes
+				   methods - predefined method 
+
+
+
+		java - object oriented programming language
+
+			project - problem - solution - approach
+			Object oriented approach
+				analysis - objects
+
+			agent commission 
+			identified objects:-
+				- agent 
+					properties 
+						id
+						name
+						email
+						phone
+						address		
+						gender
+					behaviour
+						sellingPolicy(){}
+						getCommission(){}
+						getDetails(){}
+
+
+				public class Agent{
+					int id;
+					String name;
+
+					void sellingPolicy(){
+					}
+				
+				}
+
+				new Agent();
+
+
+
+
+
+				
+				- commission
+					properties
+						id
+						type
+						amount
+					behaviour
+						calculateCommission(){}
+						commissionDetails(){}
+
+				- manager
+				- admin
+				- payout
+				- policies
+				
+			design - class diagram, use case, sequence diagram, collaberation diagram
+
+				
+		object:- 
+			Instance of class called as object
+			objects are made from class
+		class
+			Its an template or blueprint for an object
+
+		class memebers:-
+			constructor
+			member variables 
+				1. instance member varibale
+				2. static member variable
+			member function
+				1. instance member function
+				2. static member fuction
+
+		object instance variable initilization
+			1. constructor
+			2. setter
+			
+		
+		Inheritance:
+			1. IS-A
+				
+			2. HAS-A (Association)
+				1. Aggregation (Weak association) (loosly coupled application)
+					if two object are in the has-a relationship. if Parent object dies
+					associated child object still exists in the memory
+				2. composition (Strong association)(tightly coupled application)
+					if two object are in the has-a relationship. if  Parent object dies
+					associated child object also gets deleted
+
+
+			class Player{ (palyer is parent class)
+			}
+			class Team{ child class
+				
+				Team t=new Team(); child class object
+			}
+
+				(client server web application)       
+	core java --> advanced java -->   jsp and servlet    -------->	spring framework --> spring boot
+	
+
+	Spring Core:-
+	============
+		1. Inversion of control container(IOC)
+			container  - context
+			container will be managing the beans(object)
+			How does the conatiner knows what are the bean it has to maintain. programmer
+			has to instruct what beans to be managed by container
+			programmer writes an beans instruction to container via sprinbeanconfiguration file
+			spring configuration
+			1. xml - xmlbeanconfiguration 
+				<?xml version="1.0" encoding="UTF-8"?>
+				<beans xmlns="http://www.springframework.org/schema/beans"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:schemaLocation="http://www.springframework.org/schema/beans
+					https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 					<bean class="packagename.Classname1"></bean> 
+					<bean class="packagename.Classname2"></bean>
+				</beans>
+			2. Java - javabeanconiguration
+				@Configuration
+				public class Config{
+					@Bean
+					public Classname methodname(){
+						return new Classname();
+					} 
+				}
+
+
+
+			
+
+						
+						ApplicationContext / Container
+						1. ClasspathXmlApplicationContext
+						2. AnnotationConfigApplicationContext	
+
+
+				Sterrotype Annotation:-
+					SteteyoType annotation - can be autodetected as a bean by the
+					conatiner via component scanning
+
+						@Component
+							- @Controller
+							- @Service
+							- @Repository
+							- @RestController					
+		2. Dependency Injection(DI)
+		
+
+
+		1. Xml Bean Configuration 
+			1.1 Xml Bean Configuration + xml Bean Definition
+			---------------------------------------------------
+			<?xml version="1.0" encoding="UTF-8"?>
+				<beans xmlns="http://www.springframework.org/schema/beans"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:schemaLocation="http://www.springframework.org/schema/beans
+					https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 					<bean id="loan1" class="springconcepts.Loan"></bean> 
+					<bean id="loan2" class="springconcepts.Loan"></bean> 
+ 					<bean class="springconcepts.Bank"></bean>
+				</beans>
+		2. Java Bean Configuration 
+			2.1 Java Bean Configuration + Java bean Definition
+				@Configuration
+				public class Config{
+					@Bean // ac - AnnotationConfigApplicationContext
+					public Loan loan() {
+						return new Loan();
+					}
+
+					@Bean // ac - AnnotationConfigApplicationContext 
+					public Loan loan2() {
+						return new Loan();
+					}
+
+				}
+			2.1 Java Bean Configuration + Java bean Definition stereotype
+				@Configuration
+				@ComponentScans(basePackage="pacakgename")
+				public class Config{
+				
+
+				}
+
+		3. xml bean configuration + java bean definition
+							 
+			<?xml version="1.0" encoding="UTF-8"?>
+				<beans xmlns="http://www.springframework.org/schema/beans"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:schemaLocation="http://www.springframework.org/schema/beans
+					https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 					
+			</beans>
+
+	Dependency Injection:-
+	======================
+			class Account{
+			}
+
+			
+			
+			class Loan{
+				//members
+				//Loan class should access it has to access account details
+				
+				
+			}
+
+
+			ApplicationContext (IOC)
+				
+				new Account();
+
+				new Loan();
+					
+		@Component
+		class Classname{
+			@Autowired
+			int id;
+			@Autowired
+			Classname(){
+			}
+			@Autowired
+			void setId(){
+			}
+		}
+
+
+
+		@Autowired - Type - spring framework
+		@Inject - Name - jakarta.inject
+		@Resource - Name , Type - jakartaee.resources
+
+
+	java language + object orientation approach ==> 
+
+	abstraction 
+		abstract class
+		interface	
+
+	Object casting
+		
+
+	SOLID Design principles:-
+	========================
+		S - Single Responsibility
+		O - Open Closed Principle
+		L - Liskow Substitution principles
+		I - Interface segration principles
+		D - Dependency Inversion principles
+	
+
+	AOP:-
+		cross cutting concern
+		logging, transaction,security
+
+		Aspect
+			Around(pointcut(execution(void transferMoney())))
+			//security check
+			//db transaction concepts
+			// logging
+			
+		
+		void transferMoney(){ --> jointpoint
+			//logic that tranfereing money
+			//throws 
+			//return fff.
+		}
+		
+		dependencies:-
+			spring AOP
+			aspectj - aspectjtools
+
+			<dependencies>
+		<!--
+		https://mvnrepository.com/artifact/org.springframework/spring-context -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>7.0.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjtools -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjtools</artifactId>
+			<version>1.9.25</version>
+		</dependency>
+		</dependencies>
+		
+		accessmodifer returntype packagename.Classname.methodname(arg)
+
+
+
+
+
+
+
+		
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	OOP:-
+		class 
+		object
+		Encapsulation
+			binding the data and method together is called as encapsulation
+			class  is an example of encapsulation
+			class Sample{
+				int value;
+				String name;
+				void display(){
+					s.o.p(value);
+					s.o.p(name)
+				}
+			}
+			Data Hiding:-
+			===========		
+							
+		Inheritance
+			
+		Polymorphism
+				many form	
+				sendGift(Courier){
+					//goto courier office
+					// wrap the gift
+					// from  to  address
+					// weight		
+					// payment
+					// revice the reciept
+				}
+				sendGift(IndiaPost){
+					//goto post office
+					// from  to  address
+					// weight		
+					// payment
+					// revice the reciept
+				}
+				sendGift(Friends){
+					
+					// revice the reciept
+				}
+				sendGift(InPerson){
+					
+					// revice the reciept
+				}					
+			1. overloading
+				method with same name diff arg 
+			2. overriding
+				Method with same name same arg 
+
+		Abstraction
+	
+	Array
+	Collection
+	Exception handling
+
+			1. checked exception
+				A exception class extends Exception class
+			2. unchecked exception or runtime exception
+				A exception class extends RuntimeException class
+
+		
+
+
+			both checked and unchecked exception will be handled by try catch
+
+		Esxception propgation
+	java 8 features
+	JDBC
+=====================================================================================
+
+SQL:-
+*****
+	DDL
+		CREATE
+		ALTER 
+			ADD - a new column or contraint
+			MODIFY - change datatype or size
+			RENAME - change the column name or constraint name
+			DROP - a column
+		RENAME - Rename the table name
+		DROP - delete the table
+		DESC - describe the table structure
+		TRUNCATE - Delete all the rows and keeps the structure of the table
+	DML 
+		INSERT
+		SELECT
+		UPDATE
+		DELETE
+	TCL
+		SAVEPOINT
+		COMMIT
+		ROOLBACK
+	DCL
+		GRANT
+		REVOKE
+		
+	CONSTRAINTS:-
+		1. PRIMARY KEY
+		2. FOREGN KEY
+		3. UNIQUE 
+		4. NOT NULL
+		5. CHECK
+		6. DEFAULT
+	JOINS
+		1. INNER JOIN
+			1.1 EQUI JOIN
+			1.2 NON EQUI JOIN
+			1.3 NATURAL JOIN
+			1.4 SELF JOIN
+		2. OUTER JOIN
+			2.1 LEFT OUTER JOIN
+			2.2 RIGHT OUTER JOIN
+			2.3 FULL OUTER JOIN
+JDBC:-	
+		Java Database connectivity
+
+		Java code --------------------------> mysql, postgresql, msserver, oracle
+
+			JDBC API - set of interfaces, abstract class
+				Connection(I) - used to hold db connection
+				DriverManager(C) - returns one connection object with db config
+				Statement(I) - sql query
+				PreparedStatement(I) - sql query
+				CallableStatement(I) - sql query
+				ResultSet(I) - it hold an result of select query
+			
+		Manage the group of object
+			Array
+			Collection
+		Collection API
+			Iterable(I)
+			Collection(I)
+			List(I) - ArrayList, LinkedList, Vector
+			Set(I) - HashSet, LinkedHashSet, TreeSet
+			Map(I) - HashMap, LinkedHashMap, TreeMap
+
+
+
+
+		JDBC:-
+			u need to load the driver class
+			u need to create a database - studentdb
+			u need to create a table - student
+			10 STEPS OF BOILERPLATE CODE	
+			
+mysql:-
+       Relation database management system (RDBMS)		
+			table or object or relation
+HIBERNATE:-
+		ORM tool - Object Relation Mapping
+			java object -- mapping to a -- relation or table
+				Query
+				HQL 
+				Configuration
+				SessionFactory
+				Session	- Connection
+				beginTransaction
+				INSERT | DELETE | UPDATE | SELECT
+				endTransaction
+				close the session
+				close the sessionFactory
+		Hibernate third party
+				hibernate core
+				mysql-connector-j 
+
+	Steps to work with hibernate:-
+			1. write hibernate.cfg.xml as an configuration into resources
+					db details
+
+			2. create an Pojo class. mark that pojo class as an Entity class 
+					@Entity
+					@Id
+			3. Create a class with main method
+					3.1 create configuration object
+					3.2 Create a SessionFactory
+					3.3 From SessionFactory get one session object
+					3.4 begin the transaction
+					3.5 perform db operation
+					3.6 commit or rollback the transaction
+					3.7 close the session
+					3.8 close the session factory
+
+	SQL:-
+		select * from tablename where columnanme=value
+
+	HQL:- 
+		select * from entityclassname where variablename=value;
+					
+
+SPRING DATA JPA:-
+===============
+
+Java Application:-
+=================
+		1. Console Based Application - jdk / j2se
+		2. Window Based Application - jdk / j2se + swing / applet, Eg: notepad, Calculator
+		3. Web Based Application  - client / server - J2SE + J2EE
+				Advanced java
+				servlet, jsp
+		4. Enterprise Web Based Application - J2SE + J2EE
+
+
+MVC DESIGN PATTERN:-
+==================
+
+
+FRONT CONTROLLER DESIGN PATTERN:-
+===============================
+
+
+Spring MVC:-
+==========
+		Steps to create a spring mvc:-
+		1. spring mvc application is an web application- client / server	
+		2. tomcat server - attached in current workspace
+		3. Add Dependencies spring-webmvc, jakarta.servlet-api.jar
+		2. web.xml
+		3. configure DispatcherServlet in web.xml
+		4. add bean configuration file servletname-servlet.xml
+				<?xml version="1.0" encoding="UTF-8"?>
+				<beansxmlns="http://www.springframework.org/schema/beans"xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xmlns:context="http://www.springframework.org/schema/context"xmlns:tx="http://www.springframework.org/schema/tx"xmlns:mvc="http://www.springframework.org/schema/mvc" xsi:schemaLocation="  http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd  http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd  http://www.springframework.org/schema/mvc  http://www.springframework.org/schema/mvc/spring-mvc.xsd  http://www.springframework.org/schema/tx   http://www.springframework.org/schema/tx/spring-tx.xsd">
+		5. In bean configuration file component scan to stereotype annotations
+		6. Add dependecies hibernate-core, spring-orm, mysql
+				create a bean for Datasource
+				create a sessionfactory bean object inject datasource bean
+				create transactionmanager bean inject sessionfactory
+				create spring-tx bean inject transactionmanager
+		7. takes a lot of configuration
+		8. 	
+				
+
+	Insurance Management System
+			DB diagram - ER - diagram
+		
+			model
+			class Insurance{
+				private int id;
+				private String planName;
+				private int premium;
+				private int tenure;	
+			}
+		modelMapper
+
+	Production Grade application:-
+	============================
+		1. Rest Application
+			Already implementation - insurance management system
+		2. server side validation
+			1. added dependency
+				spring-boot-starter-validation
+			2. Add jakarta bean validation
+				@NotBlank	
+				@NotNull
+				@Positive
+				@Negative
+				@Positive
+				@FutureOrPresent etc
+			3. @Valid
+		3. exception handling
+			@RestControllerAdvice
+				@ExceptionHandler
+		4. api documented
+			springdoc-openapi-starter-webmvc-ui
+			http://localhost:8080/swagger-ui.html
+		5. logging 
+			
+		6. security
+		7. monitering
+			spring boot - actuators
+		8. Testing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
