@@ -1,0 +1,1225 @@
+http://3.108.3.95:8080/hello
+let person={
+	name:"abc",
+	city:"chennai",
+	age:45
+}
+
+
+let person={
+	"name":"abc",
+	"city":"chennai",
+	"age":45
+}
+
+
+  console.log(data);
+        console.log("Line 32:"+Object.toString(data))
+        if (data.status === "ok") {
+          //console.log(data.userType);x`
+          alert("login successful");
+          window.localStorage.setItem("token", data.token);
+          window.localStorage.setItem("userType", data.roles);
+          window.localStorage.setItem("loggedIn", true);
+          
+          console.log( window.localStorage.getItem("token", data.token))
+          console.log(window.localStorage.getItem("userType", data.roles))
+          console.log(window.localStorage.getItem("loggedIn", true));
+          
+          // if (data.userType == "Admin") {
+            
+          //   return (window.location.href = "./admin-dashboard");
+          // } else {
+          //   window.location.href = "./userDetails";
+          // }
+        }
+========================
+ {/* unauthorized route */}
+		{isL}
+          {!isLoggedIn && (
+            <>
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<SignUp />} />
+              <Route path="/" element={<Login />} />
+            </>
+          )}
+
+          {/* ProtectedRoutes */}
+           <Route element={<ProtectedRoute />}>
+            <Route path="/login" element={<Navigate to="/" />} />
+            <Route path="/register" element={<Navigate to="/" />} />
+            {userType != "Admin" ? (
+              <>
+                <Route path="/" element={<Navigate to="/userDetails" />} />
+                <Route path="/userDetails" element={<UserDetails />} />
+                <Route path="/products" element={<Product />} />
+                <Route path="/admin-dashboard" element={<Navigate to="/" />} />
+              </>
+            ) : (
+              <>
+                <Route path="/" element={<Navigate to="/admin-dashboard" />} />
+                <Route path="/userDetails" element={<Navigate to="/" />} />
+                <Route path="/products" element={<Navigate to="/" />} />
+                <Route path="/admin-dashboard" element={<AdminHome />} />
+              </>
+            )}
+          </Route>
+
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Navigate to="/" />} />
+
+
+==============================
+function Navbar({ isLoggedIn, userType }) {
+  return (
+    <nav className="navbar">
+      <ul className="nav-list">
+        <li className="nav-item"></li>
+        {!isLoggedIn && (
+          <>
+            <li className="nav-item">
+              <Link to="/login" className="nav-link">
+                Login
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/register" className="nav-link">
+                Register
+              </Link>
+            </li>
+          </>
+        )}
+        {isLoggedIn && userType == "Admin" ? (
+          <li className="nav-item">
+            <Link to="/admin-dashboard" className="nav-link">
+              Dashboard
+            </Link>
+          </li>
+        ) : (
+          isLoggedIn && (
+            <>
+              <li className="nav-item">
+                <Link to="/userDetails" className="nav-link">
+                  User Details
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link to="/products" className="nav-link">
+                  Product
+                </Link>
+              </li>
+            </>
+          )
+        )}
+
+        <li className="nav-item">
+          <Link to="/about" className="nav-link">
+            About
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
+}
+
+===============================================
+
+
+IDE:-
+	rapid application developement
+	compiler (javac classname.java) as soon as when hit save
+	debugger
+	syntax error while u are writing
+	auto intellegence 
+	etc
+	JAVA Developement IDE:-
+		Eclipse - spring framework
+		STS	- spring boot, microservices
+		Intelij IDEA
+		Netbeans
+		JCreator
+	
+Eclipse:-
+		Workspace ---> One or more projects --> one or more packages
+        along with JRE system library--> classes and interfaces etc	
+
+Namming conventions of java:-
+	
+		class name & interface - camel case
+				Each word starting character capital letter
+		variable name:-
+				Starting word all letters must be lowercase
+				From second word onward each word starting character should be in captial
+				letter
+		method name
+				Starting word all letters must be lowercase
+				From second word onward each word starting character should be in captial
+				letter followed by ()
+		constant variable
+		
+variable:-
+		scope:-
+			That variable how far it can be accessable
+		Lifetime:-
+			How long that variable is in the memory
+		
+		1. instance variable
+			A variable declared inside the class outside of any method
+			scope -  through out the class
+			lifetime - as long the object is existing in the heap memory
+		2. static variable
+			A variable declared inside the class outside of any method with the static keyword
+			scope 
+			lifetime
+		3. local variable	
+			u need to initalize explicitly	
+			scope - with in the block 
+			lifetime - as long that method is in execution 
+
+Inheritance:-
+		* Class has a members
+			class Classname{
+				member variable
+					instance member
+					static member
+				member function or method
+					instance function
+					static function	
+			}
+		1. IS-A (extends | implements)	
+			1.1 Single Inheritance
+			1.2 Multiple Inheritance
+			1.3 Hierachial Inheritance
+			1.4 Multilevel Inheritance	
+			1.5 Hybrid Inheritance
+		2. HAS-A (Association)
+			 creating an object of one class to other class
+
+			 2.1 Composition (Strong Association)
+				 If the objects are in the HAS-A relationship. 
+				 If we remove one object also removes 
+				 other object that relationship is called as composition 
+				 Strongly dependent on each other objects
+				 tightly or Strongly coupled application
+
+			 2.2 Aggregation (Weak Association)
+				If the objects are in the HAS-A relationship. 
+				If we remove one object still other object
+				can exists is called as aggregation
+				loosely coupled
+
+	When to use IS-A vs Has-A
+	=========================
+			IS-A
+				Person is a Human
+				Laptop is a Electronic
+				Car is a Vechile
+			HAS-A
+				Human has-a Heart
+				Laptop has-a CPU
+				Car Has-a Engine
+	
+	
+
+
+Class:-
+		1. Userdefined class
+				Company
+				Person
+		2. Predefined class
+				Scanner - variable, function	
+				String  - variable,function
+				Arrays
+				System
+				Math
+			
+Polymorphsim:-
+==============
+			doing a perticular task in different forms 
+			sendParcel - task
+			parcel service:-
+			Eg:-
+			Method overloadding - method with same different arg is called as method overloadding
+			sendParcel(IndiaPost){
+				nearst post office
+				pack the parcel
+				fill a form
+				payment
+			}
+			sendParcel(Courier){
+				nearest courier office
+				pack the parcel
+				give from and to address
+				payment
+			}
+			sendParcel(byfriends){
+				pack the parcel
+				give it ur friend
+			}
+			sendParcel(byself){
+				pack the parecel
+				goto the delivery address
+			}
+			Method overidding:-
+				Method with same name same arg is called as method overidding
+
+
+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
+			Eg:-
+			class Payment{
+					public String makePayment(String cash){
+						s.o.p("cash payment") - forms cash
+					}
+			}
+
+			class UpiPayment extends Payment{
+					public String makePayment(String upiId){
+						s.o.p("upi payment") - forms upi
+					}
+			}
+			
+			Polymorphism:-
+				1. compile time polymorphsim / method overloading	
+						binding - compile time binding / early binding / static binding
+						During compile time itself the binding decision will be made 
+						is called as compile time binding
+				2. Runtime polymorphsim / method overidding
+						binding - runtime binding / late binding / dynamic binding
+						During compile time itself the binding decision will be made 
+						is called as runtime binding
+				
+				Method Binding:-
+						Deciding for the method call which function definition it has to execute
+						it is also called function call resolving
+						JVM takes biding decision
+						1. method name
+						2. no args
+						3. type of args
+
+						Method call
+						Method definition
+								void makePayment(){ //method definition
+									statement 1;
+									statement 2;
+									statement 3;
+								}	
+
+								makePayment(); // method call
+Abstraction:-
+				Showing the essential and its implementation is called as abstraction
+				
+				
+				public void add(int a,int b){ // function definition or implemented function
+				
+				}
+			
+				public void multiply(int a,int b); // function with out definition
+														unimplemented method
+														abstract method	
+
+				1. Abstract class
+				2. Interface
+Exception in Handling in Java:-
+===============================
+				Exceptions are not syntax error
+				Exception gets created at Runtime
+				Exceptions are abnormal condition that happens during the code excution(runtime).
+				Exception need to be handled by the programmer using try catch
+			
+				what if the exception are not handled by programmer
+					- your program execution abruptly stops and will not allow to run the remaining 
+					  lines of code 
+				
+				what if the exception are handled by programmer
+					- your program execution gracefully and keeps executing
+					  the remaining lines of code then it stops
+
+
+				1. How do u handle exception in java:-
+				====================================
+						try{
+							// anticipating or expecting the lines of code possible create an exception
+						}
+						catch(Exception e){   //handler to handle the exception
+
+						}
+				2. Exception propogation
+				========================
+						throws 
+
+Two types of exception:-
+===============================
+		1. Checked exception
+		2. Unchecked Exception / Runtime ExceptionD
+
+Array:-
+======
+		To store group of similar elements or type in a single variable
+		Array is fixed size
+		int[] marks=new int[5];
+		
+		1. Primitive type 
+		2. non primitive / Reference type	
+
+		Array can hold both primitive and non primitive type
+Advantages:-
+		u can access element through index(Random access)
+		
+problems:-
+		size is fixed - cannot increase or decrease the size
+		If u have more no of insertion and deletion performance issue
+
+Collection:- java.util
+		To manuplation of objects can done using an collection
+		To store group of similar elements or type in a single variable
+		Collection can hold only non primitive / reference / objects
+		Dynamic in size
+		types of Collection  - list, set, queue, map
+		Each collection is backed by one datastructure 
+
+Wrapper classes
+	converting primitive type to a non primitive type vice versa
+
+	primtive type 						wrapper classes		
+	byte								Byte
+	short								Short
+	int 								Integer
+	long								Long
+	float								Float
+	double 								Double
+	char								Character		
+	boolean								Boolean
+
+	Boxing
+		converting primitive type to object type
+	UnBoxing
+		converting object type or non primitive type to primitive type
+	Autoboxing
+		automatically converts primitive type to object type or reference type
+
+	AutoUnboxing
+		automatically converts object type reference type to primitive type
+
+
+	U have to choose a collection based on following
+		1. Order or unorder
+		2. duplicate or not
+		3. null or not
+
+		LIST:-
+			ordered
+			duplicate yes
+			null yes
+
+
+
+
+
+Java applications types:-
+		1. console application - J2SE - input output can be given and seen in the console
+		2. window application - J2SE - swing, applet - notepad,paint
+		3. web application- JDK + Jakarta EE- client server application
+		4. enterprise application - J2SE + J2EE- client / server application very complex
+web application:-
+		client 
+		server - configure the server
+				 web server - Tomcat, glashfish, jetty, etc
+				 application will be running inside the tomcat server(deploying the application)
+				 J2EE - servlet, jsp, websocket, annotation
+
+		J2EE - java enterprise edition
+				
+				 
+SPRING FRAMEWORKS:-
+		- Jdk + spring framework dependencies
+			
+
+	spring core:-
+
+		new  - programmer control creating object, managing te object, destroying object			
+
+
+		- jdk + spring core container - beans, context, el, core
+		- IOC - Inversion of control 
+			java application
+				programmer - manages the object - create, updating ,deleting
+				container or context - is going manage your objects - IOC
+				two types container:-
+				1. BeanFactory(IOC container)
+				2. ApplicationContext(IOC container)
+	  			
+				ApplicationContext is an interface			
+				which is implemented by the classes
+				1. ClassPathXmlApplicationContext
+				2. FileSystemXmlApplicationContext
+				3. AnnotationConfigApplicationContext	
+				4. WebApplicationContext
+
+				
+					
+		- Dependency Inject
+	Bean Scope:-
+	==========
+			1. singleton scope - only single instance object gets created. 
+								 always / share the same object
+			2. prototype scope - it creates a new object when u request
+			3. request
+			4. session
+			5. application
+	Bean Lifecycle:-
+	==============
+			
+	Depenedency Injection:-
+	======================
+			
+			If one class members wanted to be accessed in another class(Inheritance -  HAS-A)
+			one class object wanted to access the members another class object
+			Classname ref=new Classname();
+			Dependency Injection
+			Spring - Loosly coupled
+
+	Encapsulation:-
+	==============
+			Wraapping your data and method together is called encapsulation
+			class - is the example for the encapsulation
+			The other classes should access data members directly
+
+
+	MVC Architecture:-
+	=================
+				- Model View Controller
+					Model - Data
+					View - Presentation - html, jsp - to display the model
+					Controller - Servlet - used to controll the flow of the request
+												and the response
+												Model will be prepared by the controller
+
+
+	Front Controller MVC Architecture:-
+	===================================
+					Front controller - servlet
+					model
+					controller
+					view
+	JDBC:-
+	=====
+			
+				Java program --> databases (mysql,oracle,postgresql,db2,sybase)
+				syntax					syntax(sql)	
+				compiler					parsing
+				JRE	 					query execution plans
+										select a low cost excution plan
+										query execution engine will execute the query
+
+				Java syntax					 SQL syntax
+								   Driver			
+										
+				
+				java ----- mysql
+					mysqldriver
+				
+				java------postgresql
+					postgresqldriver
+
+				java------oracle
+					oracledriver
+			
+				
+
+				JDBC API:-
+				java.sql
+				javax.sql
+	
+						Connection(I) - Interface
+						DriverManager(C) - Class
+						Statement / PreparedStatement / Callable Statement(I)
+						ResultSet(I)
+
+				JDBC steps:-
+				============
+				Prerequiste:-
+					* Add the Driver to the project  
+				1. Load the Driver Class
+						Class.getName("package.Driver");
+				2. Create a connection object
+						Connection con=DriverManager.getConnection(url,username,password);
+				3. Statement / PreparedStatement / CallableStatement 
+						Statement stmt=con.createStatement(); // create an Statement object
+										(Static sql Query)
+										OR
+						PreparedStatement pstmt	= con.prepareStatement();
+										(Dynamic sql Query)
+										OR
+						CallableStatement cstmt=con.prepareCall();
+										(Stored procedure / function)
+
+				4. execute the query
+
+					ResultSet executeQuery(String selectquery); //DML - read operation - select
+					int executeUpdate(String insertdeleteupupdatequery); //DML - write operation - insert,update,delete
+					boolean execute(String query); //DDL & DML query
+
+				5. close the resource object
+						close statement
+						close resultset
+						close connection
+
+
+					Employee e=new Employee(); //not a java resource object
+
+					Any java class / object holds a computer hardware then that class 
+					object is called as java resource object
+
+					Scanner s=new Scanner(System.in);
+					File f=new File("c:/users/demo.txt");
+
+					Connection 
+
+					close();
+
+				
+		Statement(I)       --->   extends   ---> PreparedStatement(I)---> extends ---> CallableStatement(I)
+		static sql query			 dynmaic sql query			calling PLSQL procedure,function
+	 ResultSet executeQuery(String query) 		ResultSet executeQuery()
+	 int executeUpdate(String query)		int executeUpdate()
+	 booelan execute(String query)			booelan execute()	
+
+			
+	Static Query
+		INSERT INTO trainee VALUES(34345,'raj','454545','rajesh.kit@gmail.com'); parse | compile | execute
+	Dynamic Query
+		INSERT INTO trainee VALUES(?,?,?,?);
+
+		on this placeholder ? you will set the value later
+JPA:-
+	It's an specification or standard how java objects can be persisted in the persistent storage like database
+	JPA - set of annotation,interfaces and abstract classes
+	JPA - EntityManagerFactory(I), EntityManager(I)
+	JPA - will manages only the entity object
+					
+								JPA   
+								 | annotation
+								 | interfaces,AC
+				|=====================================| 
+				|implemented by			 | implemented by
+			Hibernate(ORM) 				   EclipseLink(ORM)
+				|
+				|
+			   JDBC
+				|
+				|
+			  mysql
+
+
+								List(I)
+								  |
+					|===============================|
+				ArrayList		LinkedList        Vector
+
+				List alist=new ArrayList();
+
+
+===========================================================================================================
+
+			interface Calculator{           //specification
+				public void add();
+				public void multiply();
+			}
+
+			class AdvancedCalaculator implements Calculator{ //implementation class
+				public void add(){}
+				public void multiply(){}
+	
+			}
+
+			class Main{
+				Calculator ac=new AdvancedCalculator();
+				ac.add();
+				ac.multipy();	
+			}
+
+Steps  for JPA:-
+			prerequiste 
+			1. hiberate core dependecies
+			2. db driver dependencies
+			Step 1: create Entity Manager Factory 
+			EntityManagerFactory emf=Persistence.createEntityManagerFactory("persistence");
+       
+						Session factory need one hibernate configuration 
+						1. xml - hibernate.cfg.xml
+						2. java 
+			Step 2: create a session
+						Session session=sf.openSession();
+			Step 3: begin the transaction
+						session.beginTranasction();
+			Step 4: execute the query using jpa / hibernate method
+						session.save(); // insert
+						session.get(); //select
+						session.update(); //update query
+						session.delete();//delete query
+			Step 5: commit or rollback the transaction
+						session.getTransaction().commit();
+						session.getTransaction().rollback();
+
+			Step 6: close the session
+						session.close();
+			Step 7: close the session factory
+						sf.close();
+					
+
+
+
+
+
+
+
+
+Steps  for hibernate:-
+			prerequiste 
+			1. hiberate core dependecies
+			2. db driver dependencies
+			Step 1: create Session factory
+						SessionFactory sf=new Configuration().configure().buildSessionFactory();
+						Session factory need one hibernate configuration 
+						1. xml - hibernate.cfg.xml
+						2. java 
+			Step 2: create a session
+						Session session=sf.openSession();
+			Step 3: begin the transaction
+						session.beginTranasction();
+			Step 4: execute the query using jpa / hibernate method
+						session.save(); // insert
+						session.get(); //select
+						session.update(); //update query
+						session.delete();//delete query
+			Step 5: commit or rollback the transaction
+						session.getTransaction().commit();
+						session.getTransaction().rollback();
+
+			Step 6: close the session
+						session.close();
+			Step 7: close the session factory
+						sf.close();
+					
+
+			SQL- SELECT columnlist  FROM tablename - table and columnnames
+			HQL- SELECT variablenames FROM Entityname - entity and the fields
+
+RDBMS:-
+
+	primary key
+	foreign key refers to primary key
+
+	CREATE TABLE order(order_id int,item varchar(50),cost int,
+		PRIMARY KEY(order_id));
+	
+	CREATE TABLE Customer(id int,name varchar(50),email varchar(50),order_id_fk int,
+	primary key(id),
+	FOREIGN KEY(order_id_fk) REFERENCES order(order_id));
+			
+JPA Mapping:-
+	1. Create an object for your Entity - new state
+
+Springframework:-
+		IOC
+			Types of container:-
+			1. Bean Factory(I) - manages the object or beans
+			2. ApplicationContext(I) - manages the object or beans
+						ApplicationContext(I)
+							|
+				ClassPathXmlApplicationContext(class) implements ApplicationContext
+				AnnotationConfigApplicationContext(class) implements ApplicationContext
+				SystemFilePathApplicationContext(class) implements ApplicationContext
+
+				
+		
+			1. Bean Configuration XML + Bean Definition XML
+			2. Bean Configuration XML + Bean Definition Java Stereotype annotation
+			3. Bean Configuration Java + Bean Definition Java
+			4. Bean Configuration Java + Bean Definition Java Stereotype annotation
+					
+			
+	Stereotype annotation -  stereotype annotated classes are auto detected by the container and it 				 creates as a bean inside the container through componentscan 
+			         it creates as bean inside the container
+					@Component
+					   | extends
+			--------------------------------------------------
+			@Controller 	@RestController   @Repository   @Service
+
+		Spring Framework:-
+			Spring web mvc - @Controller - returns a view
+			Spring rest api - @Cotroller + @ResponseBody    or  @RestController - returns an data as json | xml | text | 			html
+			1. add dependencies to your project version
+			2. Dispatcher servlet in web.xml
+			3. xml bean configuration - bean definition, component-scan, mvc:annotation-driven
+			4. View resolver bean creation and config
+			5. hibernate bean database configuration - datasource, transaction etc
+			6. hibernate.cfg.xml
+			7. need to configure external tomcat server
+			
+			
+		Spring Boot:-
+			1. spring boot starter
+			2. DispatcherServlet already configured
+			3. @SpringBootApplication - @EnableAutoConfiguration + @Configuration + @ComponentScan		
+			4. view resolver configuration
+			5. spring data jpa repositories
+			6. embedded or internal tomcat server
+			7. h2 in memory database
+
+		STS:-	
+
+
+
+
+
+		
+		DI:-
+			object dependency
+
+		AOP:-
+				
+			execute code before display method executes
+			execute code after display method executes
+			execute code after throwing display method executes
+			execute code after returning display method executes
+			execute code around display method executes
+			@Aspects	
+			class Advices{
+				@Before("public void display()")
+				public void advise1(){
+					Sysout(advise1);
+				}
+				@After("public void display()")
+				public void advise2(){
+					Sysout(advise2);
+				}
+				@AfterThrowing("public void display()")
+				public void advise2(){
+					Sysout(advise2);
+				}
+				@AfterReturning("public void display()")
+				public void advise2(){
+					Sysout(advise2);
+				}
+			}
+
+
+			class Demo{						
+				public void display(){
+					Sysout("hi");
+					Sysout("hello");
+	
+				}
+			}
+
+			Class Main{
+				p s v m(String[] args){
+					Demo d=new Demo();
+					d.display();
+				}
+			}
+
+IO:-
+	
+
+
+Spring mvc + Hibernate:-
+========================
+		1. Add Dependencies spring-webmvc, jakarta.servlet-api.jar
+		2. web.xml
+		3. configure DispatcherServlet in web.xml
+		4. add bean configuration file servletname-servlet.xml
+				<?xml version="1.0" encoding="UTF-8"?>
+				<beans xmlns="http://www.springframework.org/schema/beans"xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xmlns:context="http://www.springframework.org/schema/context"xmlns:tx="http://www.springframework.org/schema/tx"xmlns:mvc="http://www.springframework.org/schema/mvc" xsi:schemaLocation="  http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/sprxing-beans.xsd  http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd  http://www.springframework.org/schema/mvc  http://www.springframework.org/schema/mvc/spring-mvc.xsd  http://www.springframework.org/schema/tx   http://www.springframework.org/schema/tx/spring-tx.xsd">
+</beans>
+		5. In bean configuration file component scan to stereotype annotations
+		6. Add dependecies hibernate-core, spring-orm, mysql
+				create a bean for Datasource
+				create a sessionfactory bean object inject datasource bean
+				create transactionmanager bean inject sessionfactory
+				create spring-tx bean inject transactionmanager
+		7. takes a lot of configuration
+		8. 	
+
+
+Springboot:-
+===========
+		create an production grade standalone enterprise application very rapidly
+		spring boot are oppiniated
+		spring boot dependecies are starts spring-boot-starter
+		less configuration u can focus application logics
+		internal tomcat server
+		
+		STS:-
+		how do u create Spring boot appication:
+		-------------------------------------- 
+		1. spring initilizer
+		2. sts
+			
+
+
+
+
+	Rest API:-
+		Representational 	State | Resource	Transfer
+		JSON|XML|HTML|TEXT     Java Object		Client/Server
+		Rest Architectural Style Rules:
+		1. Uniform Resource Identified(URI)
+		2. Client / Server
+		3. Stateless
+		4. Caching
+		5. 
+	
+
+	POST http://localhost:9090/trains - client will post a train data to server
+	GET http://localhost:9090	/trains/trainid - client is requesting to give train details by id
+	GET http://localhost:9090/trains - client is requesting give all train details
+	DELETE http://localhost:9090/train - client is asking to delete train from the server
+	PUT http://localhost:9090/train - client is asking to update a train in the server
+
+
+
+		Http Status 
+			100-199 - informational
+			200-299 - success
+			300-399 - Redirection
+			400-499 - Client side request packet error
+			500-599 - Server side error
+
+Bean Validation:-
+================
+			validate the integirity of the data
+			Client Side validation- javascript we validate the data
+						 before the being send to the server we validate the data that we have given.
+			Server Side validation - After the client sends a request once server recieves the request by that time
+						on server we do validate the data
+
+
+Junit:-
+======
+		Testing - Quality Assurance(QA team)
+		Unit testing
+		Java Projects - to perform unit test - Junit Framework
+		Junit  is a third party framework. we need to add as an dependency
+		Types of Unit Testing
+		1. BDD - Behaviourl driven developement -  first need to write source code after u write case
+		2. TDD - Test Driven developement 
+
+		Junit:-	
+			Test case - it is a java method to test the source code function. @Test annotation
+			
+			Test Case
+			src->
+			class Calculator{
+					public int add(int a,int b){ 
+						return a+b;
+					}
+					public int divide(int a,int b){ 
+						if(b!=0){
+							return a/b;
+						}
+						else{
+							throw new ArithmeticException();
+						}
+					}
+			}
+
+			SerialNumber    testcase name  	  input		expected 		actual		result    comments		
+		
+				1			addTestcase	  10,20	 		30			30			PASS	
+					
+				2. 			divideTestcase 20,10			2			2			PASS
+				
+				3. 			divideTestcase 20,0		    10             20         ArithemeticException
+
+Mockito:-
+========
+
+
+Spring security:-
+================	
+			Servlet - is a java program can cappable of handle request or response
+			Filter -  Filter is also a java program can capable of intercept the request,response
+
+
+			Steps to create a jdbc authentication spring security:-
+			======================================================
+			1. In UserController create an end point for user creation
+					POST /user-api/user
+					
+			2. Dto Class:- UserDto
+					@Data
+					@AllArgsConstructor
+					@NoArgsConstructor
+					public class UserDto{
+						private int userId;
+						private String email;
+						private String password;
+						private String phone;
+						private List<String> roles;
+					}
+			3. User Entity class
+					@Data
+					@AllArgsConstructor
+					@NoArgsConstructor
+					@Entity
+					public class User{
+						@Id
+						@GeneratedValue
+						private int userId;
+						private String email;
+						private String password;
+						private String phone;
+						@OneToMany(cascade=CascadeType.ALL)
+						private List<String> roles;
+					}
+					@Data
+					@AllArgsConstructor
+					@NoArgsConstructor
+					@Entity
+					public class Roles{
+						@Id
+						@GeneratedValue
+						private int roleId;
+						private String roleName;
+					}
+			4. create a UserService
+					public UserDto createUser(UserDto userDto){
+					}
+
+			5. create UserRepository manages the User entity
+			6. create RolesRepository manages the Roles entity
+	
+			public class Emi{
+				public boolean login(){
+					//logic login
+					addTworandomNumber();
+				}
+				public long addTworandomNumber(){
+					return Math.random()+Math.Random();
+				}
+			}
+			interface SpecialBird {
+				
+				public void makeSound();
+			} 
+			interface Bird extends SpecialBird{
+				public void fly();
+			}
+			
+
+			class Dove implements SpecialBird{
+				public void fly(){
+				}
+				public void makeSound(){
+				}
+			}
+
+			class Penguin implements Bird{
+				public void makeSound(){
+				}
+			}
+
+			Dependency Inversion:-				
+				Dependency should depend on abstraction not on the implemenation
+
+					interface UserRxepository extends JpaRepository{
+					}
+					@Service
+					public class SimpleJpaReposioty implements JpaRepository{
+							// all the abstract method jpareposioty method got implemented inside
+							// SimpleJparepository
+					}
+
+				
+					public class UserService{
+						@Autowired
+						private JpaRepository jpaRepository;
+					}
+
+			7. add spring-boot-starter-security
+			8. configure the spring security and allow the user registration
+			8. encode the password while user registration
+
+
+
+Bean validation
+junit / mockito
+logging framework
+Lombok
+Exception Handled
+Api document (Swagger / OPEN API)
+Actuators - Endpoints - Monitering
+spring security -  protect all the endpoints
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,559 @@
+Final Evaluation Questions:-
+
+Core Java:-
+	1. JDK vs JRE vs JVM
+	2. JVM Architecture
+	3. Array in java? Arrays utility class
+	4. String? Ways to create a string? Immutable or muttable, How strings are stored in memory(SCP)?
+			String s="cts";   //immutable
+			String s=new String(); // immutable
+			StringBuffer s=new StringBuffer(); //muttable
+			StringBuilder s=new StringBuilder(); //muttable
+	5. classes in java ? 
+	6. members of a class?
+			member variable, member function, constructor, static block
+			member varaible  - static member variable, instance member variable
+			member function - static member function, instance member function
+	7. When an object created for a class. How memory gets allocated in jvm?  
+	8. primitive type vs reference type ? memory allocation for those types?
+	9. Encapsulation  -> data hiding , making all the fields and create getters / setters to access the data memebrs
+	10.polymorphsim:-
+			1. Compile polymorphism (method overloading)/ - Binding - compile time binding or early binding or static binding
+			2. Runtime polymorphism(Method overriding) - Binding - runtime binding or late binding or dynamic binding
+			
+			Object Casting:- 
+				1. upcasting
+				2. downcasting
+	11. Abstraction:-
+			1. Abstract class
+			2. Interface
+			
+	12. When to use abstract class vs interface
+	13.  Basics package.
+	14.  Acccess Modifier. 
+	15.  Non access modifier? final, static ,synchronized, etc
+			If use non  access modifer it changes the default behaviour
+
+				class level
+				variable level
+				method level
+
+				final class Demo{
+					static final int a; // static member varaible -method area memory - initialization
+					final void add(){ // static method - method area memory -cannot override
+
+					}
+				}
+				class Demo1 {
+				}
+			
+	16. 	Inheritance
+			to access the mebers of one class to another classes
+
+			IS-A (extends)
+			1. single Inhritance
+			2. Multiple Inheritance
+			3. Multilevel Inheritance
+			4. Hierachial Inheritance
+			5. Hybrid Inheritance
+
+			Has-A (creating an object of one class inside another class) - Association
+			1. Aggregation (Weak Association)
+			2. Composition (Strong Association)
+
+	17. When to use IS-A vs HAS-A
+	18. Difference between composition(tightly coupled application) vs aggregation(Loosly coupled application)
+	19. extends vs implements
+	20. Abstract class and interface
+				HAS-A inheritance is not possible
+				IS-A inheritance is possible
+
+	21. If a class is a final class
+				HAS-A inheritance is possible
+				IS-A inheritance is not possible
+	22. Collection
+				class hierachy of collection
+				Each collection classes are backed by one datastructure
+				
+					ArrayList - Array DS
+					LinkedList - Doubly linked list ds
+					vector - array ds
+					
+					Hashset - hash table ds
+					LinkedHashSet - Hashtable _ LinkedList
+					TreeSet - HashTable + Sorting algorithm
+					
+					HashMap - hash table
+	23. When to use what collection class
+					ordered or unoreder
+					duplicate or not
+					null or non null
+
+	24. JDBC
+				Steps to connnect to DB
+				1. load the Driver class
+				2. Create a connection Driver.getConnection(url,username,password)
+				3. statement / PreparedStatement / CallableSatetment		
+				4. execute / executeUpdate / executeQuery
+	25. Exception Handling
+				What is exception
+				Types of Exception
+					1. Checked Exception
+					2. Unchecked Exception
+				What if u are not handle an exception inside ur application  / if u handle an exception in ur application
+				How do u handle an exception
+									
+						try{
+							
+						}catch(Exception e){
+						
+						}finally{
+							ceaning up the resources
+						}
+				Exception propogation
+					The programmer who are writting the code is not willing to handle the exception with try catch
+					instead he is propogating / delegating the exception to the caller function
+
+					void add(){
+						------;
+						-----;
+						try{
+							exception  - handle the exception
+						}catch(Exception e){
+						}
+						-----;
+						-----;
+							
+					}	
+
+					another way:-
+					
+					void add() throws Exception{  //exception propogation
+						------;
+						-----;
+						
+							exception  - handle the exception
+						
+						-----;
+						-----;
+							
+					}		
+
+					How do u propogate thr checked exception / unchecked exception - diff checked vs unchecked 
+
+					how do u create ur own exception / custom exception
+		26. Annotation
+				Meta data or Instruction is given to program during runtime is called as annotation
+				1. before a class - class level annotation
+						@RequestMapping
+						@RestController
+						@Service
+						@Repository
+						@Component
+				2. before an interface - interface level annotation
+						@FunctionalInterface
+				3. Before a method - method level 
+						@GetMapping
+						@PutMapping
+							
+				4. before variable
+						@Autowired
+						@NotNull
+						@NotBlank
+					
+				5. Before contrucctor
+						@Autowired
+				6. Before parameters
+						@RequestBody
+						@Valid
+						@PathVariable 
+				How your own / custom annotation
+	Java 8 features
+	1. inside the interface u can have also implemented methods
+		interface Demo{
+			static void add(){
+			}
+			default void add1(){
+			}
+		} 
+	2. static vs default method
+	3. functional interface
+			1. Predefined functional interface
+				Predicate
+				Consumer
+				Supplier
+				Producer
+			2. customer functional interface
+
+
+	4. Lamda expression
+			
+	5. Stream API
+			
+				1. source
+					array / collection
+					.stream() - method to create a stream
+					Stream.of() - method to create a stream
+				2. intermediate operation
+					filter
+					map
+					Sorted
+				3. terminal operation
+					forEach
+					collect
+					findFirst
+	6. Optional
+				isEmpty()
+				isPresent
+				.get()
+				.orElseThrow
+
+
+
+
+Spring framework:-
+=================
+			0. Spring version used inside the project 
+			1. What is spring framework? why?
+			2. Spring core concepts are
+				IOC, DI, AOP
+			3. What is loosly coupled application? 
+			4. How spring framework make loosly couple application?
+				aggregation
+			
+			5. What is IOC?
+			6. what are the types of IOC container?
+				BeanFactory(I)
+				ApplicationContext(I)
+						ClassPathXmlApplicationContext
+						AnnotationConfigApplicationContext
+						WebApplicationContext
+
+				programmer ---> supply Bean configuration file ---> IOC container
+						(XML | Java)
+			7. Bean Factory vs Application Context
+			8. Bean Configuration +  bean definifion
+			   8.1 xml + xml
+				<?xml version="1.0" encoding="UTF-8"?>
+				<beans xmlns="http://www.springframework.org"
+   				 xmlns:xsi="http://www.w3.org"
+    				 xsi:schemaLocation="http://www.springframework.org 
+    				 http://www.springframework.org/spring-beans.xsd">
+
+    				 <!-- Bean definition -->
+   				 <bean id="exampleBean" class="com.example.ExampleBean">
+        			 <bean id="anotherBeanId" class="com.example.AnotherBean" />
+
+				</beans>
+
+			   8.2 xml +Java Annotation
+				<?xml version="1.0" encoding="UTF-8"?>
+				<beans xmlns="http://www.springframework.org/schema/beans"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xmlns:context="http://www.springframework.org/schema/context"
+				xsi:schemaLocation="http://www.springframework.org/schema/beans
+				https://www.springframework.org/schema/beans/spring-beans.xsd
+				http://www.springframework.org/schema/context
+				https://www.springframework.org/schema/context/spring-context.xsd">
+
+				<context:annotation-config/>
+				<context:component-scan basePackages="com.cts"/>
+				</beans>
+				
+			   8.3 Java + Java Annotation
+					@Configutation + @Bean
+					@Configuration + @ComponentScan + @Component | @Controller | 
+					                 @RestControlller | @Service | @Repsoitory
+			9. what is Dependency Injection	
+			10. Types  of dependency injection
+				Constructor
+				Setter
+			11. Autowire vs @Autowired (Wiring the objects)
+			12. When two bean are available inside the IOC. Ambigious
+				@Primary
+				@Qualifier
+			13. Bean Scope - singleton | prototype | request | Session | Application	
+			14. Bean life cycle method
+			15. AOP - crosscutting concers - logging, security, transaction
+			16. pointcut, jointpoint, advices , aspect
+			17. pointcut expression
+			18. aop proxy works
+			19. Kinds of spring applications
+			 		MVC and RestAPI
+			20. mvc design pattern
+			21. front controller mvc design pattern	
+			22. Spring mvc flow
+			23. Spring rest flow
+			24. Spring mvc 
+				@Controller + @RequestMapping
+						@GetMapping @PostMapping...
+
+			25. Rest API
+				@Controller + @RequestMapping + @ResponseBody
+				@RestController + @RequestMapping
+
+			26. Stereyotype annotation
+				@Component --> @Controller @RestController @Service @Repository
+
+			27. @RequestBody @PathVariable @PathParam?
+			28. What is Rest API?
+			29. What are all rest architectural style?
+			30. @ResponseEntity @HttpStatus?
+			
+JPA:- Jakarata Persistence API:-
+================================
+			1. what is JPA?
+			2. Implementation of JPA? 
+				Hibernate ORM, iBatis, EclipseLink etc
+			3. Why JPA?
+			4. JDBC Vs Jpa?
+			5. What is ORM?
+			6. Entity in jpa
+			7. Hibernate State
+				@Entity
+				class Student{
+				 	@Id
+				}
+				Student s=new Student();  //new State
+				repo.persist(s); // persistent state
+				repo.clear(s); //detached state
+			8. @Table, @Column, @JoinColum, @OneToOne @ONeToMany,@ManyToOne	
+
+		Hibernate						JPA
+				
+	Implementaion of JPA					     Standard
+	hibernate.cfg.xml					     persistence.xml
+	SessionFactory,Session					  EntityManagerFactory,EntityManager
+			9. cascading in jpa.
+			10. Fetch types 1.Eager fetching 2. lazyfetching
+			11. SQL Query vs JPQL Query or HQL Query
+		Spring Data Jpa:-
+		================
+			1. spring data + JPA
+					Repository(I)
+					    | extends
+					CrudRepository(I)
+					    | extends
+					PagingAndSortingRepository(I)
+					    | extends
+					JpaRepository(I)
+					    | implements
+					SimpleJpaRepository(C)
+			2. why spring data jpa
+			3. Custom queries in spring data jpa	
+				
+				3.1 Query generation by method name
+					public interface UserRepository extends JpaRepository<User,Integer>{
+						public User findByPhoneNumber(String phoneNumber);
+					}
+				3.2 Query generation by @Query annotation
+					public interface UserRepository extends JpaRepository<User,Integer>{
+						@Query("select * from User where phoneNumber=?1")  //JPQL
+						public User fhfhdhfj(String phoneNumber);
+					}
+				3.3 Query generation by @NativeQuery annotation
+					public interface UserRepository extends JpaRepository<User,Integer>{
+					@NativeQuery("select * from user where phonenumber=?1")  //SQL
+					public User fhfhdhfj(String phoneNumber);
+					}
+
+		Spring boot
+		===========	
+			0. spring boot version used in the project
+			1. what is spring boot?
+			2. why spring boot mostly used over plain spring framework?
+				@SpringBootApplication 
+					@EnableAutoConfiguration
+					@ComponentScan
+					@Configuration
+			3. @Controller vs @RestController
+			
+		Spring boot creates production Grade application
+		1. Lombok - avoids boilerplate code
+				constructor,getter,setter,toString,equals,hashcode
+				@Builder
+				@Slf4j		
+		2. Server Side validation:-
+				Jakarata Bean Validation
+				@Valid , @Validation
+				Front end validation(js) then why server side validation
+		
+		3. Exception Handling
+				
+				@RestControllerAdvice + @ExceptionHandler
+				@RestControllerAdvice - In the controller layer any of the method
+						        thropws any exception. That exception will be thrown 							to @RestControllerAdvice class and handled by
+							@ExceptionHandler annotated method will handle
+							the exception and ApiError response will be send back
+							to the client
+		4. Api documentation
+				1. why api documentation is important.
+				2. OPEN API - It gives u standard format 
+				3. Swagger is an implementation of OPEN API
+				4. annotation - @OpenAPIDefinition, @Operation, @ApiResponse
+
+		5. Logging:-
+				logback - default logging implementation in sping boot
+						application-logback.xml
+				log4j2 - exclude the logback and include the logj2
+						log4j2.xml
+				Log level - 
+				Appender - console, file appender, db appender
+				Format pattern - log message display format
+			
+				slf4j - its an standard and guidelines for the logging
+							slf4j
+							  |
+						Logback		log4j2    tinylog.... etc
+		6. Actuators:-
+				monitering the spring boot application.
+				endpoints to access the performance of the spring boot application
+				/metrics
+				/health
+				/mapping
+				/beans
+				/environments	
+
+				By default spring boot has enabled only few endpoints. you need to enable
+				the remaining actuators end points by own.
+		7. security
+				1. Why spring security?
+				2. Spring security flow?
+				3. Security filter chain
+				4. Authentication vs Authorization
+				5. Basic Authentication vs Jwt Authentication
+				6. what is jwt? why?
+				7. Types of authentication
+					7.1 Inmemory authentication provider
+					7.2 Dao Authentication provider
+				8. what are the steps need to follow to condifgure spring security
+				
+		8. testing	
+				1. what is testing? why?
+				2. what is unit testing? junit?
+				3. @Test, @BeforeEach, @AfterEach,@AfterAll @BeforeAll...
+				4. What is mockito? why?
+				5. How do u test the service layer?
+				6. How do u test the controller layer?
+				7. what is Assertion?
+				8. AssertEquals, AssertThrows
+				9. @Mock , @InjectMocks, @MockMvc, @MockBean
+	Microservices:-
+	=============
+				1. what is monolithic application?
+				2. what is microservices
+				3. monolithic vs microservice
+				4. what is distributed architecture
+				5. problems in microservice distributed architecture
+					5.1 service to service - Feign Client
+						discovery and registry  - Eureka server
+						ip port no - changes    - Eureka server
+					5.2 load balancer - spring cloud Feign client has an internal load balancer
+					5.3 Api gateway - spring cloud api gateway - security, routing,load balancer
+					5.4 centralized config - spring cloud config server
+					5.5 falult tolerance - circuit breaker
+					5.6 tracing and monitering - zipkin
+				6. what is a spring cloud? spring cloud version?
+	Devops:-
+	=======
+		1. what is virtalization / hypervisor
+		2. Types of virtualization / hypervisor
+		3. what is virtual machine
+		4. how aws use virtalization and gives u one virtual machine to u
+		5. spring boot application ->jar file -> run inside the virtual machine	
+			build - making a jar file of your project
+			deployement - shipping and running the application in side the server 
+	
+		AWS:-
+			Saas - hardware + OS + ms office + java + sts + eclipse + vsc
+			Pass - hardware + OS
+			Iaas - hardware - cpu, memory, network
+			region and availability zones
+			virtual machine
+			vpc - aws cloud networks
+			create a sql nonsql databases
+			
+		1. VM vs Docker container
+		2. Docker architecture
+		3. docker commands
+				docker info
+				docker --version
+				docker build -t tagname -f Dockerfile pathofthedocker
+				docker images
+				docker image remove imangename/imageid
+				docker run --name containername imagename
+				docker stop containername/id
+				docker start containername/id
+		4. docker registry / repositories
+				1. local docker image registry / repo
+				2. remote docker image registry / repo (Docker hub)
+				
+			
+		Spring boot application -->  Dockerfile --> jar file --> docker build (dockerize the 				application to a docker image--->  docker run(dockerized image will run as a
+			container ) --> dockerized application will be running inside the container
+
+
+		deploying spring boot app inside virtual machine vs dockerize spring boot app and running 		inside docker engine diff and advatages 
+
+		
+
+React js
+		What is react js / Why react
+		component 
+		types of component
+			1. class component
+			2. functional components
+		props and state
+		life cycle methods of component
+		React Hooks functional component
+		How do u share data between component - props
+		props drilling
+		useState() 
+		useContext - how to share state data to child component
+		props vs useContext 
+		useState vs useReducer
+		state - component local state - useState / useReducer- simple
+			   component global state - Redux  - complex
+		How to make an external api call
+			fetch api - post, get, put, delete
+			fetch api asych await
+			axios
+		useEffect
+		Form validate - onBlur,onChange,onSubmit
+		SPA
+		React Routing
+			steps to install and implement react routing inside the react application
+			1. install the routing
+			2. main.tsx u need add <BrowserRouter> from the react routing
+			3. app.tsx add Routes Route with path component to be loaded
+			4. nested route
+			5. dynamic Pathvariable
+			6. useParam
+			7. useNavigation
+		Remaining lifecycle hooks
+
+
+		
+	
+logging
+	
+sonar qube
+
+maven
+
+git
+		Repository - local git vs remote git(github)
+		git flow - 
+				git init - write program - git add .  git commit ,git remote add origin giturl, git push   	
+				git clone
+				git fetch
+				git fork	
+			
+
+
+
+
+
+
+
+
