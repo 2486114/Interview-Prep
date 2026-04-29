@@ -1,0 +1,2612 @@
+
+
+
+Language:-
+	- words,sentences,grammer
+	- java keyword, statements, syntax of java
+	
+	Java Keywords:-
+		1. predefined defined keyword
+			must be written in lower case
+		2. user defined keywords (lower case, Upper case, camel cases)
+			classname,packagename,interfacename,methodname etc
+	Java:-
+		1. Structure / procedural programming
+			c
+		2. object oriented programming
+			oop- object oriented programming
+			Objects
+			classes
+		3. Functional Programming
+
+		High level Language - Human Readable
+			compiler
+		Intermediate Language - .class (byte code instruction)
+			interpreter
+		Low level Language - 0's 1's
+
+		JDK vs JRE:-
+		JDK:-(Write, compile, run, debug, document)
+			- Includes:
+			- Java Compiler (javac)
+			- Debugger (jdb)
+			- Documentation tools (javadoc)
+			- JRE (Java Runtime Environment)	
+			  	- Java virtual Machine
+				- core .class libraries	
+				- Supporting files for execution
+
+		JRE:- (Run the code - .class file )
+			- Java virtual Machine
+			- core class libraries	
+			- Supporting files for execution
+	Function / method:-
+		public void logout(){
+			// logout task or logic
+			
+		}
+		public void login(username, password){
+			
+			
+				
+		}
+		login("rajesh","12345");
+		
+		public void convert(){
+			// pdf to word
+		}
+		public int add(int a,int b){
+			return (a+b);
+		}
+		int total=add(54,56);
+		int finalTotal=total/2*100;
+	Control Execution Flow:-
+		control statements
+		1. conditional control statement
+			1. if
+			2. switch
+			3. Ternary operator
+		2. unconditional control statement		
+			1. break
+			2. continue
+	Loop:-
+	
+	Object Oriented Approach:-
+	=========================
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Object Oriented Programming
+	============================
+		
+	icicibank---> problem statement---> cams
+		
+		Object oritented approach
+
+	
+	Object:-
+		Real world existing things are called as object		
+		1. Physcial Object
+			Associate
+			Chair
+			Laptop	 
+
+		2. Logical Object	
+			Internet
+			Transaction
+
+		Object:-
+			properties 
+			Behaviour
+
+	Automate the Banking:-
+		OO:-
+		Identify the objects
+		Account
+			number
+			type
+			balance
+			blockAccount(){}
+			changeAddress(){}
+			changeEmail(){}
+
+		2. Customer
+			id
+			name
+			age 
+			phone
+			changeProfile(){
+			}
+			resetPassword(){
+			}
+		3. Transaction
+		4. Branch
+		5. CreditCard
+			number
+			type
+			cvv
+			expiryDate
+			limit
+			payment(){
+			}
+			setLimit(){
+			}
+			billingCycle(){
+			}
+		6. DebitCard
+		7. Cheque
+		8. PersonalLoan
+		9. Insurance
+		10. Investment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		public class Customer{	
+			name
+			phone
+			age
+			dob
+			email
+			doTransaction(){
+			}
+			changeProfile(){
+			}		
+		}
+		Customer
+			name
+			phone
+			age
+			dob
+			email
+			doTransaction(){
+			}
+			changeProfile(){
+			}			
+		Transaction
+			tranactionId
+			transactionDateTime
+			status
+			getTransactionStatus(){
+			}
+		Deposit
+			
+		Withdrawl
+		Debitcard
+			cardNumber;
+			expirydate
+			cvv
+			pin
+			swipe(){
+			}
+			AtmWithdrawl(){
+			}
+		Creditcard
+		Cheque
+		etc
+	Class:-
+	Objects are made from class
+	class is template or blueprint from which are made
+	class has a members
+
+		accessmodifier nonaccessmodifier classs Classname{
+			member variable
+			member function
+		}
+		class CreditCard{
+			int number;
+			String type;
+			int cvv;
+			Date expiryDate;
+			int limit;
+			void payment(){
+				statements;
+			}
+			void setLimit(){
+				statements;
+			}
+			void billingCycle(){
+				statements;
+			}
+
+		}
+		Eclipse IDE- 
+			workspace - contains one or more java projects
+			Project - contains one or more .java files
+				
+
+		instance of class called as object
+		objects are made from class
+		Syntax:-
+
+			Classname referencename=new Classname();
+			CreditCard cc=new CreditCard();
+
+
+		CreditCard
+			number
+			type
+			cvv
+			expiryDate
+			limit
+			payment(){
+			}
+			setLimit(){
+			}
+			billingCycle(){
+			}
+
+
+
+
+		Constructor
+			special member function
+			but does not returns a value	
+			constructor name should be same as class name
+			constructor will be called implicitly or automatically
+			Types of constructor:
+			1. default constructor
+			2. No arg constructor
+			3. arg constructor
+
+		static block
+	Java Class:-
+		1. Userdefined class
+			Customer
+			CreditCard
+			DebitCard
+		2. Predefined class	
+			String
+			Integer
+			Scanner etc
+
+			JRE System Library
+			  jars   - java.base
+			    packages - java.util
+				classes - Scanner
+					variable and methods - nextLine(),nextInt(),nextFloat()
+		 
+	accessmodifier nonaccessmodifier classs Classname{
+			member variable
+				1. instance member variable
+				2. static member variable		
+			member function
+				1. instance member function
+				2. static member function
+		}
+
+	Class:-
+	========
+	variable:-
+		1. instance variable
+			A variable is declared outside of any method inside the 
+			class is called as instance variable
+		2. static variable
+			A variable is declared outside of any method inside the 
+			class with static keyword is called as static variable
+		3. local variable
+			A variable is declared inside the method local variable
+	method:-
+		1. instance method
+			A method inside the class are called as instance method
+		2. static method
+			A method inside the class with static keyword are called 
+			as static method
+
+	static members gets allocated on - Method area
+	instance members gets allocated on  - Heap 
+	local variable and reference variable - stack
+
+	Phases of execution:-
+	1. compile time - static members memory allocation
+	2. Runtime - instance members memory allocation
+
+	Datatype:-
+	1. Primitive 	
+		byte,short,int,long,float,double,boolean,char
+	2. Non primitive / reference variable
+		String 
+
+		    int a=10; // primitive int varible
+		    String a="10";
+
+		
+	Inheritance:-
+	=============
+		It makes the relationship between the classes
+		to access the members from one class to another
+		class 
+		using inheritance in java u can make relationship 
+		Types of Inheritance
+		1. IS-A Inheritance - extends, implements
+			Employee IS-A Human
+			Bose IS-A Human
+			Peacock IS A Bird
+
+			Dog IS-A Animal
+			Cart Has-A Product
+			Laptop IS-A Computer
+			1.1 Simple Inheritance
+			1.2 Multiple Inheritance
+			1.3 Multilevel Inheritance
+			1.4 Hierachial Inheritance
+			1.5 Hybrid Inheritances
+		2. HAS-A Inheritance (Association) - creating an object of one class inside 
+			the another class
+			2.1 Composition (Strong Association)
+			2.2 Aggregation (Weak Association)
+	
+			Human HAS-A Heart
+			Car Has-A Engine
+	Object Oriented Programming:-
+	===========================
+		class
+		object
+		Encapsulation:-
+			Wrapping the data members and function together it
+			called as encpsulation
+			class is going to help us to achieve the encapsulation
+
+			Data Hidding:-
+			  Hide the data members and its implementation to	
+			  the outside world
+			  U have to make members as private
+			
+			public class Facebook{
+				String id;
+				String username;
+				String password;
+				public void display(){
+					s.o.p(id);
+					s.o.p(username);
+					s.o.p(password);
+				}
+			}
+
+				
+		inheritance
+		polymorphism
+		abstraction	
+
+	Java Standards and naming conventions:-
+	1. Reserved Keywords - all letters must be lower case
+	2. Userdefined Keywords
+		packages - all letters must be in lower case
+		classname - every word starting character must be uppercase
+		interface - every word starting character must be uppercase		
+		variablename- 
+			- first word all letters must be lower case
+			  second word onward every word starting character
+			  should be in capital
+			   
+    			  name
+			  firstName
+			  loanAmount;// can be reinitialized
+			  totalLoanAmount;
+			  totalCaluclatedFinalLoanAmount;
+		Constant Variable:-
+			- all letters must be in capital
+			- has more than one word each is connected by _(underscore)
+
+			LOAN_AMOUNT;// can be reinitialized
+			TOTAL_FINAL_AMOUNT
+		Method name:-
+			- first word all letters must be lower case
+			  second word onward every word starting character
+			  should be in capital followed paranthesis ()
+
+			public void login(){}
+			public void loginWithUsernameAndPassword(){}
+
+	Polymorphism:-
+			poly- many morphism- forms
+			
+			Task - sendGift
+
+			sendGift(Courier c){	
+				// goto courier office
+				// wrap the gift
+				// fill the from address to address
+				// weight it - pay
+				/ collect the reciept
+			}
+			sendGift(IndiaPost c){	
+				// goto nearest post office
+				// wrap the gift
+				// fill the from address to address
+				// weight it - pay
+				/ collect the reciept
+			}
+			sendGift(Friends c){	
+				// call the friend
+				// wrap the gift
+				// fill the from address to address
+			}
+			sendGift(Inperson c){	
+				
+				// wrap the gift
+				// deliver it
+			}
+
+
+			payment(cash){
+			}
+			payment(online){
+			}
+			payment(upi){
+			}	
+
+
+		Types of polymorphsim:-
+		1. compile time polymorhism / Method overloading
+			A method with same name differenet argument
+			compile time binding / early binding / static binding	
+		2. runtime polymorphism / Overidding
+			
+			runtime binding / late binding / dynamic binding
+
+		Binding - is the process of connecting method call with wright method
+			  definition is called as binding
+			* looks at method name
+			* No of arg
+			* Type of arg
+
+		Covarient type in method overloading
+
+		Method Declaration:-
+		public void makePayment(String username,String password);		
+
+		Method defnition / Method Implemented
+		 public void makePayment(String username,String password){
+        		System.out.println("enter the username and password");
+        		System.out.println("validate username and password");
+        		System.out.println("enter the amount");
+        		System.out.println("check the balanace");
+        		System.out.println("payment success or failure")
+		}
+		Method call:-
+		makePayment("user1","user@123");	
+	
+		public class Object{
+			member variable; 1 variable
+			member function; 7 methods
+		}
+		public class Payment extends Object{
+					
+		}
+
+		packages
+			organizing your source code (classes,abstract classes,
+						     interfaces, ENUM)
+			package also avoid class name collision
+			package gives the visibility of the members
+			SbiBanking:-  www.sbi.com
+			========
+				com.sbi.account
+					SavingAccount.java
+					CurrentAccount.java
+					DematAcount.java
+				com.sbi.transaction
+					Transaction.java
+					Deposit.java
+					Withdrwal.java
+				com.sbi.loan
+					PersonalLoan.java
+					HomeLoan.java
+				com.sbi.card
+					CreditCard.java
+					DebitCard.java 	
+
+				create a packages we going to organize our source code
+				
+				package packagename;
+				all letters must be lowercase
+				the package name usually reverse of your domain name
+		access modifier 
+			public
+			private
+			protected
+			default
+		non access modifer
+			It changes the defaut behaviour
+
+			static
+			final
+			synchronized
+			strictfp
+			native
+			etc
+
+		Occurances of access modifier / non access modifier
+			Before class, interface, enum 
+			Before variable
+			Before method
+			Before constructor
+		
+		final
+		static
+		Abstraction:-
+		============
+			
+			
+			1. abstract class (extends)
+
+			2. interface (implements)
+				
+		final, static
+
+		final vs abstract class:-
+		
+		Exception Handling:-
+		===================
+			1. compile time - syntax errors
+			2. Runtime - exceptions
+			Its an abnormal condition created and thrown during runtime(code execution)	
+			If exception were not handled properly then program execution will
+			stop abrubtly
+			Jvm or programmer also can create some exception
+
+			If exception were handled properly u can terminate the very smoothly
+			
+			Handling exception in java:-
+			try{
+				//anticipating or exepcting the line(s) of possible to create
+				// an exception those line u will keep it inside the try
+			}
+			catch{
+		
+			}
+			finally{
+			}
+			Types of exception
+			1. Checked Exception
+				the exception classes which extends predefined Exception 
+				class those are called checked exception
+
+			2. Unchecked Exception OR RuntimeException
+		
+				the exception classes which extends predefined RuntimeException 
+				class those are called unchecked exception
+
+		If exception gets created in the code
+		1. u can handle the exception with the try catch
+		2. u can propgate the exception
+	
+	Generics:-
+	=========
+		Java Genrics is one of the most important features introduced in Java 5.
+		Generics was added in Java 5 to provide compile-time type checking 
+		removing risk of ClassCastException that was common while working with 
+		collection classes.
+
+
+		Generics allow you to create classes, interfaces, 
+		and methods that operate on types specified by the caller. 
+
+
+		- Type Safety: Compile-time checking of types prevents `ClassCastException`.
+		- Code Reusability: Generic algorithms can be written once and used with any type.
+		- Elimination of Casts: Reduces boilerplate code by removing the need for explicit type casting.
+
+		wildcards (?):-
+			
+	Wrapper Class:-	
+					Warpper class
+		Primitive type             convert 		nonprimitive type
+		byte			Byte
+		short			Short
+		int 			Integer
+		long			Long
+		float			Float
+		double			Double
+		char  			Character
+		boolean			Boolean
+
+		collection - holds only object
+
+
+	Boxing - converting from primitve type to a non primitive type
+	Unboxing - converting from non primitve type to a primitive type
+	AutoBoxing
+	AutoUnBoxing	
+	Collection:-
+		Manage the group of objects - add an object, remove an object, search object
+					      sort, shuffle.
+		Collection is an framework has a set classes, abstract classes and interface
+		that is used for managing the object
+		
+		Collection has a hierachy
+		
+		Each collection classes and interfaces are backed by one datastructure
+
+		
+		1. orderd or unorder
+		2. null or not
+		3. duplicate or not
+
+		Annotations in java:-
+		=====================
+		Java annotations are a powerful feature that allow you to add metadata 
+		(data about data) to your code. 
+		They provide extra information about your
+                to the compiler or interpreter or IDE or framework and other tools
+
+		Annotations are essentially tags that you attach to code elements like 
+			classes,
+			interfaces, 
+			methods, 
+			fields, 
+			and parameters
+		@ - all annotation starts with @ followed by annotation name
+			
+		Reflection in java:-
+		====================		
+			Java Reflection provides the ability to inspect and manipulate
+			classes, interfaces, fields, and methods at runtime. 
+			Reflection api classes and interface by which u can analyze 
+			your class
+			Class
+			Methods
+			Fields
+			Constructor
+			Annotation
+Strings in java:-
+================
+	* String in java stores a collection of characters
+	* String in java enclosed inside the ""
+	* String in java are strored inside the character array
+		String str="Chennai";
+		Internally java creates an character array and it stroes
+		char[] str=new char[7];
+		str---->'C' 'h' 'e' 'n' 'n' 'a' 'i'
+			 0   1   2   3   4   5   6
+	* How do you create string java:
+		1. String literal (immutable)
+			String company="CAMS";
+		2. String class object (immutable)
+			String company=new String("CAMS");
+		3. StringBuffer (mutable)
+			StringBuffer sb=new StringBuffer("CAMS");
+		4. StringBuilder (mutable)
+			StringBuilder sb=new StringBuilder("CAMS");
+			
+
+Multitasking:-
+		
+	1. Process based multitasking 
+		word.exe  ---> CPU  ---> output
+	2. Thread Based multitasking
+		word.exe - The smallest independent unit of execution within a process
+		thread1 - typing()
+		thread2 - savedocument()
+		thread3 - spellcheck()			
+		thread4 - auto format()
+
+		thread - execution code
+		
+		jvm -  Thread(main thread) -> execute Classname.main()    
+
+		1. extending Thread class
+		2. By implementing Runnable interface
+
+
+		MIN - 0
+		NORM - 5
+		MAX -10
+
+			
+			
+
+
+
+
+
+
+
+	Maven 
+		groupId - company name / client name
+		artifactId - project name
+		version - 0.0.1
+
+		architype - 
+
+Spring Framework:-
+==================
+	IOC
+		BeanFactory - older / classic container
+		ApplicationContext - latest container
+		both are interfaces in spring 
+			ApplicationContext(I)
+				| ClassPathXmlApplicationContext(C)
+				| FileSystemXmlApplicationContext(C)
+				| AnnotationApplicationContext(C)
+				| WebApplicationContext(C)
+
+		ApplicationContext / Container / Context
+		Bean - java objects
+		Configuration
+			1. Xml Bean Configuration
+				<bean></bean> - bean definition
+			2. Java Bean Configuration
+				@Configuration
+					@Bean - bean definition
+
+		1. XML Bean Configuration + Xml Definition
+		2. XML Bean Configuration + java bean definition
+					    (Sterotype annotations)
+		3. Java Bean Configuration (@Confifuration) + java bean denfinition (@Bean)
+		
+	DI:-
+		Dependency Injection (Wiring)
+			1. constructor base injection
+			2. setter base injection
+
+		public class Mobile{     // strong association or composititon 
+					 // tightly coupled application
+			
+			Mobile(){
+				// Object Dependency or HAS-A
+			}
+			main(){
+				Processor p=new Processor(); 
+			}		
+		}	 
+		public class Processor{
+			//members
+		}
+			
+
+
+		public class Mobile{     // weak association or aggregation 
+		         		 // loosly coupled application
+			Processor p;
+			Mobile(Processor p){
+				this.p=p; // Object Dependency or HAS-A
+			}	
+			p s v main(){
+				//Processor pro=new Processor();
+				//Mobile m=new Mobile(pro);	
+			}	
+		}	 
+		public class Processor{
+			//members
+		
+		}
+
+Java 7:
+========
+	try with resource
+
+Java 8 Features:-
+==================
+	Till Java 7 inside the interface u can have only abstract methods
+		interface interfacename{	
+			abstract method  
+			abstract method
+		}
+
+	After Java 8 inside the interface u can have implemented method
+		interface interfacename{	
+			abstract method  
+			default method - instance method
+			static method - static method
+		}
+
+	Functional interface
+		An interface has only abstract method zero or more implemented
+		Method function interface
+
+		An interface has more abstract method zero or more implemented
+		Method it is not an functionalinterface
+
+		1. Predefined Functional interface
+			@FunctionalInterface
+			public interface Runnable {
+    				public abstract void run();
+			}
+
+			public interface Comparable<T> {
+				public int compareTo(T o);
+			}
+
+			@FunctionalInterface
+			public interface Comparator<T> {
+				 int compare(T o1, T o2);
+			}	
+
+			public interface Predicate<T> {
+				boolean test(T t);
+			}
+			@FunctionalInterface
+			public interface Consumer<T> {
+				void accept(T t);
+			}
+			@FunctionalInterface
+			public interface Function<T, R> {
+				R apply(T t);
+			}
+			@FunctionalInterface
+			public interface Supplier<T> {
+				T get();
+			}
+
+		2. User Defined interface
+			Calculator
+			
+	Lambda Expression
+		public int add(int a,int b){
+			return a+b;
+		}
+
+		Add add=(a,b)->a+b; // concise, short
+		
+		* Lambda expression is nothing but it is an implementation of
+		  one abstract method from Functional interface 
+
+		Rules for writing a lambda:-
+		----------------------------
+		1. remove annotation
+		2. remove access and non access modifier
+		3. remove return type
+		4. remove the method name
+		5. arg - remove the arg type
+			no arg - keep the brackets()
+			one arg - u can remove bracket
+			two or more arg - keep the bracket
+		6. after the arg add lambda operator ->
+		7. if lambda body has one statement 
+			- then remove {}
+			- that too return statement then remove the return keyword
+		8. if the lambda body has more than one statement {} mandatory
+			
+	Method Reference
+		
+	Stream API
+	(GroupObject)			one or more
+	Source    ----> stream() --> intermdiateoperation --> terminaloperation
+	(collection,array)	
+	LocalDate, LocalTime, LocalDateTime
+	Optional
+Java 17 Featutes:-	
+==================
+	text block
+	sealed 
+	record
+Java 21:
+===========
+
+	
+Spring framework:-
+	The Spring Framework is a powerful, lightweight Java framework designed to simplify 
+	enterprise application development
+	
+	It helps developers build scalable, maintainable, and loosely coupled applications 
+        by managing dependencies and providing a rich programming model.
+	
+	- Inversion of Control (IoC): 
+		Spring takes control of object creation and wiring, 
+		allowing developers to focus on business logic.
+	- Dependency Injection (DI): 
+		Objects receive their dependencies from the Spring container rather than creating 
+		them manually.
+	- Aspect-Oriented Programming (AOP): 
+		Separates cross-cutting concerns like logging and security from core business logic.
+	- Modular Architecture: 
+		Spring is divided into modules like Core, AOP, MVC, ORM, Security, and more—use only what you need.
+		
+
+
+	Object coupling - how objects are dependent on each other
+
+	tightly coupled application
+		composition - creating an object with the new keyword
+			    - if u delete parent object associated child object going to get deleted
+	loosly coupled application
+		Aggregation - creating an object and managing the object IOC, DI
+			    - if u delete parent object associated child object will be existed
+	Bean Life Cycle:-
+		1. container created
+		2. container reads the bean config file
+		 	2.1 Xml
+			2.2 Java
+
+		3. container read the bean definition
+			3.1 xml - <bean class=""></bean>
+			3.2 annotation - @Component + @ComponentScan
+			3.3 @Bean method
+
+		4. bean created
+			continer will read the bean definitions and created an bean object by calling
+			the constructor
+
+		5. post creation bean
+			- You can hook into this phase using:
+			- @PostConstruct annotation
+			- afterPropertiesSet() from InitializingBean
+			- init-method in XML or @Bean(initMethod = "...")
+
+		6. BeanPostProcessor Hooks
+			- Spring calls postProcessBeforeInitialization() 
+			  and postProcessAfterInitialization() for custom logic.
+
+		7 Bean Ready for Use
+			- The bean is now fully initialized and can be used by the application.
+
+		8. before bean object is going to destroy
+			- Triggered when the container shuts down:
+			- @PreDestroy annotation
+			- destroy() from DisposableBean
+			- destroy-method in XML or @Bean(destroyMethod = "...")
+
+		9. Bean Destruction
+			- Spring cleans up resources and removes the bean from the container.
+
+
+	Bean Scope:-
+		1. singleton
+			- only one instance of bean will be available
+			- when u ask container. container always returns the same object
+		2. prototype
+			- when we ask a bean from the container. container will everytime create 
+			  a new bean object and returns
+		3. request 
+		4. session
+		5. application
+
+
+	Autowiring:-
+		Dependent object will be wired or injected automatically 
+		is called as autowiring. 
+		
+		constructor - inside the constructor what is the type arg we gave accordingly
+			      IOC container finds the bean object and inject
+
+		byType - check the setter method and its type of arg accordingly
+			      IOC container finds the bean object and inject
+		
+		byName - check the field name. IOC container checks the bean with id. 
+			 if both fieldname and bean id is same then that bean will be injected
+			 (Note: setter based inject)
+
+		xml - autowire
+		java - @Autowired
+
+		@Component - it is an sterotype annotation. These annotation can be auto-detected
+			     and created as a bean inside the container
+			   - it is an another way of defining the bean definition
+			   - It has to be scaned(component scan)
+					
+			 @Component
+	
+				- @Controller
+				- @RestController
+				- @Service
+				- @Repository
+
+
+	JDBC:-(Java Database connectivity)
+
+	
+	Java Program		     Driver			Database
+			Java			SQL
+	java syntax	--------->		-------->	mysql syntax
+	datatype	Java			SQL		datatype
+	compile		<--------		<---------	parse
+	execute - jre,jvm					execute - Query Execution Engine
+
+
+	Java:-
+		
+	Collection API - interfaces, abstract classes and classes help us to manage group of objects
+	String API - classes - String, StringBuffer, StringBuilder
+		
+	JDBC API - interfaces, abstract classes and classes that enable to use connect
+		   execute, close
+
+		java.sql package
+			Driver(I)
+			DriverManager(C)
+			Connection(I) - get the connection with the db
+			Statement(I) - execute the query
+			PreparedStatement(I) - execute the query
+			CallableStatement(I) - execute the query
+			ResultSet(I) - after the query got executed the returned will be stored in
+				       in the resultset object ref
+			etc
+
+		javax.sql package
+
+
+
+					JDBC API (interfaces and abstract classes)
+					   |
+					   | implements/extends
+					   |
+					 JDBC Driver
+					(are java classes which extends/implements JDBC API)
+
+	java 		      MysqlDriver			mysql
+	java		      OracleDriver			oracle
+	java		      postgresqlDriver			Postgresql
+	java		      DB2Driver				DB2
+
+
+	JDBC Steps:-
+	1.Load the Drive class
+		Class.forName("com.mysql.cj.driver.Driver");
+	2.Create an connection
+		Connection con=
+		DriverManager.getConnnection("jdbc:mysql://localhost:3306/dbname","root","root@123");
+	3.Statement | PreparedStatement
+		Statement stmt=con.createStatement(); 
+				OR
+		PreparedStatement pstmt=con.prepareStatement();
+	4.execute the query
+		ResultSet executeQuery(selectquery);
+		int executeUpdate(insertquery|updateQuery|deleteQuery);
+		boolean execute(anyquery);			
+	5. Process the Resultset
+	6. close the resultset
+		resultsetobject.close()
+	7. close the statement | close the preparedstatement
+		statementobject.close() 
+	8. close the connection
+		connectionobject.close()
+
+
+
+	Query type:
+	1. static query - Statement
+		 String query="INSERT INTO mutualfunds VALUES" +
+                    "(878778,'ICICI',5678899,'icici@gmail.com','2025-03-05')";
+            	int result=stmt.executeUpdate(query);
+	2. dynamic query - PreparedStatement
+		 String query="INSERT INTO mutualfunds VALUES(?,?,?,?,?)";
+		 stmt.setInt(1,7564849);
+		 stmt.setString(2,"SBI Mutual funds");
+		 stmt.setInt(3,456789876);
+	         stmt.setString(4,"sbi@gmail.com");
+		 stmt.setDate(5,LocalDate.now());
+            	 int result=stmt.executeUpdate(query);
+
+		
+	Create a stock management project:-
+	===================================
+		create a database - stockdb
+		create a table - Stock
+		Stock - int id,
+			String name,
+			int unitCost,
+			int noOfUnits,
+			int totalCost
+		1. Add stock
+		2. get all stocks
+		3. update a stock
+		4. delete a stock
+
+
+
+Layered Architecture:-
+=====================
+	Key Features
+	- Separation of Concerns: Each layer focuses on a specific task.
+	- Modularity: Easier to update or replace parts without affecting the whole system.
+	- Isolation: Changes in one layer don’t ripple through others.
+	- Testability: Layers can be tested independently.
+
+Incorporate Spring core concepts:-
+=================================
+	IOC
+	DI
+
+Lossly coupled application:-
+===========================
+
+SOLID:-
+======
+
+Lombok:-
+========	
+
+
+Types of HTTP client:-
+====================
+		Any Browser
+		HttpClient software
+			- POSTMAN
+			- SWAGGER
+			- RESTClient
+			etc
+		Program HTTP Client
+			- java 
+			- angular
+			- react
+			- python
+			- C#.net
+MVC - Model View Controller:-	
+	Model - data
+	View - presentation
+	Controller - controls the model ,view and request
+Front Controller Design pattern:-
+================================
+
+web application
+	J2EE - core java, servlet, jsp, tomcat web server
+	complex or enterprise application
+	Spring Framework - ease the web entprise application developement	
+			- lot of configuration
+				DispatcherServlet - web.xml file
+				xml,java bean condifuration -@Configuration
+					@Bean
+					@Component
+					@ComponentScan
+			- dependency issues
+			- tomcat server
+	Spring Boot - Rapid enterprise app / web application
+			- Less configuration 	
+				- AutoConfiguration
+				- no need @ComponentScan
+				
+			- it made it easy
+			- dependency management
+			- Embedded (tomcat server)
+
+Dependency Inversion Principles:-
+	- If there is a dependency. Dependency should not depend on the implementation
+	  should depend on abstraction
+	- High-level modules should not depend on low-level modules. 
+	  Both should depend on abstractions.
+	- abstract class / interface
+
+Stock Management:-
+	Operation		httpmethod       url
+	create stocks  		- POST    	- localhost:9090/stocks
+	get all stocks		- GET	  	- localhost:9090/stocks
+	get Stock by ID		- GET	  	- localhost:9090/stocks/{stockid}
+	update stock by ID	- PUT	  	- localhost:9090/stocks/{stockid}
+	delete stock by ID	- DELETE  	- localhost:9090/stocks/{stockid}
+	
+	C - create R- read U- update D - delete
+
+	@Controller
+		- return model and view 
+	@Controller + @ResponseBody
+		- return model (data)
+	@RestController  = @Controller + @ResponseBody
+
+JPA:-
+			Java Persistence Api(JPA) -java 17
+				or 
+			jakarta persistence Api
+			* standard or specification how java object can stored persistence
+			  storage 
+			class Student{
+				int id;
+				String name;
+			}
+			Student s1=new Student(1000,"Sharma");
+	
+			Database(Persistent Storage)
+				|
+			      JDBC
+				| update query
+			jakarta persistence Api
+				| implements
+			   Hibernate
+				|update(id)	
+			   Spring Data JPA
+				save()
+
+Spring Data JPA:-
+				JPA
+				 | extends
+			    Repository(I)
+				 | extends
+			    CrudRepository(I)
+				 | extends
+			    JpaRepository(I)
+				 |implements
+			SimpleJpaRepository(C)	
+
+			
+			Insert - save()
+			select - findById()
+				 findAll()
+			update - save()
+			delete - delete()
+
+	Entity - Entity POJO class annotated with @Entity @Id
+
+
+WebServices:-
+=============
+		SOAP Webservice - request / response - xml format - wsdl
+			- strict syntax
+			- process the xml is also difficult
+		Rest Webservice - json
+			- different data format (media type)
+				plain / html / json / xml
+	RestFull API:-
+	=============
+	One of the way that we can implement web services
+
+	REST is an acronym for REpresentational State Transfer 
+	and an architectural style 
+	for distributed hypermedia systems.
+			(JSON | XML | Text | HTML)
+
+	Rest - Manages the resources(state)
+	===================================
+	Stock			http://localhost:9090/stock-api			method
+	create stock		POST	/stocks				
+	get all stocks		GET     /stocks
+	get stock by id		GET	/stocks/stockId
+	get stock by stock	GET 	/stocks/name/stockName
+	delete stock		DELETE  /stocks			
+	update stock		PUT 	/stocks
+
+	Insurance:-
+	Insurance		http://localhost:8080/insurance-api		method
+	create Insurance	POST	/insurance				
+	get all Insurance	GET     /insurance
+	get insurance by id	GET	/insurance/{insuranceId}
+	delete insurance by id	DELETE  /insurance/{insuranceId}			
+	update Insurance	PUT 	/insurance
+
+		
+	REST architectural style:-
+	=========================
+	1. Uniform Resources Identifier
+		Noun
+		create a resource(state) 
+		getting all resources(state)
+		get resource by id(state)
+		delete a resource(state)
+		update a resource(state)
+
+		Book - State or resource
+			create book resource
+			get all the book resource
+			get book resource by isbn
+			delete a book resource
+			update a book resource
+		
+		POST http://localhost:9090/book-api/books
+		GET  http://localhost:9090/book-api/books
+		GET  http://localhost:9090/book-api/books/{isbn}
+		DELETE http://localhost:9090/book-api/books
+		UPDATE http://localhost:9090/book-api/books
+		=============================
+		POST http://localhost:9393/api/users
+		DELETE http://localhost:9393/api/users/{id}
+		GET http://localhost:9393/api/users
+		GET http://localhost:9393/api/users/{id}
+
+		POST	http://localhost:9090/laptop-api/laptops
+		GET	http://localhost:9090/laptop-api/laptops
+		GET	http://localhost:9090/laptop-api/laptops/{id}
+		DELETE  http://localhost:9090/laptop-api/laptops
+		UPDATE  http://localhost:9090/laptop-api/laptops
+	2. Client / Server
+	3. Stateless
+			Rest Api - protocol HTTP - stateless
+			client ------> Server
+
+
+				samerequest   Query
+	4. Cachable 	client ------> server -----> DB
+				      (caches)
+			
+	5. Layered system
+			controll layer, service layer, repository layer		
+			data layer
+
+	//POST http://localhost:9090/player/api/players
+	//GET http://localhost:9090/player/api/players/{teamName}
+	//GET http://localhost:9090/player/api/players/{id}
+	//GET http://localhost:9090/player/api/players
+	//DELETE http://localhost:9090/player/api/players
+	//UPDATE http://localhost:9090/player/api/players
+
+Sms:-
+===
+Stock			http://localhost:9090/stock-api			method
+create stock		POST	/stocks				
+get all stocks		GET     /stocks
+get stock by id		GET	/stocks/stockId
+get stock by stock	GET 	/stocks/name/stockName
+delete stock		DELETE  /stocks			
+update stock		PUT 	/stocks
+
+Production grade Application needs to have:-
+	Rest API
+	Lombok - avoid boiler plate code
+	validation - if the client sends an invalid data in the request server should validate the 	inputs if it ok then should allow, if not 	returns an exception
+	Execption Handling - 
+	Logging - 
+		1. Log level - info
+		2. Formatter - the format u wanted to log information
+		3. Appender / Handler - where to log the information(console, File, DB)
+		
+					slf4j (standard or specification how java application can be logged)
+					 	interface and abstract class
+					  |	implementation
+
+		java.util.logging       logback       log4j2        tinylog (Implementation)  adm26jfsr001002
+
+		by default spring boot uses slf4j with logback
+		add log4j2 dependency and exclude the logback
+	Execption Handling:-
+		 consumer    ---->	Rest API
+			    request			
+			    response	
+
+		 try catch -  can handle the exception
+		 throws - propoating exception
+
+		 custom exception or user defined exception
+		 class CustomException extends RuntimeException{
+		 }
+	
+		throw - 
+
+API documentation
+
+	OPEN API - standard forum they defined guidelines or standard a Rest API documentation
+	   |
+	   |
+	Swagger -  Open API implementation
+	   |	- swgger ui
+	   |
+	springdoc - u can create an api documentation in the spring boot rest api application	
+	
+	
+	Steps to create spring boot rest api documenatation:-
+	1. Add spring doc dependency into the project
+		
+
+
+Actuators - to moniter the application how it is working
+	1. spring-boot-actutator
+
+	JPA - specification or standard tell you how objects can persisted
+
+	Hibernate implementation JPA
+	
+Validation:-
+============
+	Server side validation - Bean validation 
+				
+		
+	Java Bean Validation API (standard and guidelines how bean objects can be validated)
+		or    interfaces, abstract class
+	Jakarta Bean Validation 
+		|
+		|
+	Hibernate Validator (implentation of jakarta bean validation)
+		|
+	spring-boot-starter-validation	
+	consumer -------------------> Product-api
+	{				Restcontroller
+	   "name":"abc"			@RequestBody ProductDto productDto
+	}
+
+	JSR-380 - Java Bean Validation API till java 17
+		  Jakarta Bean Validation
+		  - its an standard / specification if how java 
+		    can be validator
+
+				Jakarta Bean Validation
+					|
+					|
+				Hibernate validator
+	Steps to follow:-
+	1. spring boot rest api add dependency
+		spring-boot-starter-validation
+	2. goto the bean class use validator Annotation
+		@NotBlank
+		@NotNull
+		@Size
+		@Min
+		@Max
+	3. add @Valid annotation near bean binding 
+J2EE:-
+======
+Servlet:-
+	It is a java program capable of handling the request and responses
+
+		Eg:- DispatcherServlet
+
+Filter:- 
+	critera / logic -> success or failure 
+	It is a java program it is capable intercepting request / response
+	there will condition or criteria if it is gets success it goes to the servlet if
+	not error response generated
+						  req         req         req
+	post http://localhost:8080/api/insurance   --> Filter --->    DS  -->      InsuranceController
+			error response		  <--  condition       		    @Post("/insurance")
+ 	security rest api endpoint
+			authentication - username and password
+			autherization - permission what resource should be access
+	
+	request
+		username 
+		password
+		GET http://localhost:8080/api/insurance  --> Controller --> Service --> Repsoitory  --> DB
+								username     username     username
+								  User		User	  User
+												username
+								success				email
+								failure				password
+												phone
+												name
+	 											address	
+
+		spring security:-
+				authenticated user			
+		
+Spring Security:-		
+==================
+	DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, 	HeaderWriterFilter, CorsFilter, CsrfFilter, LogoutFilter, 	UsernamePasswordAuthenticationFilter, 	DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, 	BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, 	ExceptionTranslationFilter, AuthorizationFilter
+	
+Jwt:-(json web token)
+=====================
+	Json Web Tokens
+
+	Spring security - Authentication - identity - username and password 
+			  Authorization - permission / access - role based access
+	Step 1: Add jwt dependencies
+		<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-api</artifactId>
+    <version>0.11.5</version>
+</dependency>
+
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-impl</artifactId>
+    <version>0.11.5</version>
+</dependency>
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-jackson</artifactId>
+    <version>0.11.5</version>
+</dependency>
+
+
+	Step 2:-
+		
+
+
+
+
+
+
+
+Distributed Architecture:-
+===========================
+		Distributed architecture is a software system that's 
+		spread across multiple interconnected nodes. 
+		These nodes can be physical server or virtual servers
+		, containers, or serverless functions. 
+		
+Monolithic Architecture:-
+=========================
+		Vehcile Management System
+			controller
+				VehicileController
+				ServiceController
+				SparePartsController
+				....
+			service
+				VehicileService					DB
+				ServiceService
+				SparePartsService
+				....
+			repository	
+				VehicileRepo
+				ServiceRepo
+				SparePartsRepo
+				....
+			dto
+			entity
+		
+			source code / compiled code  .class files .jar file
+
+			vms.jar  --> deploy into server 
+
+	Devops:-
+		I - integration
+		D - deployment
+
+		
+
+
+	
+
+		Adavatages:-
+		============
+		Easy deployment – One executable file or directory makes deployment easier.
+
+		Development – When an application is built with one code base, it is easier to develop.
+
+		Performance – In a centralized code base and repository, one API can often perform the same function that numerous APIs perform with microservices.
+
+		Simplified testing – Since a monolithic application is a single, centralized unit, end-to-end testing can be performed faster than with a distributed application. 
+
+		Easy debugging – With all code located in one place, it’s easier to follow a request and find an issue.
+
+		Disadavantages:-
+		===============
+		Slower development speed – A large, monolithic application makes development more complex and slower.
+
+		Scalability – You can’t scale individual components.
+
+		Reliability – If there’s an error in any module, it could affect the entire application’s availability.
+
+		Barrier to technology adoption – Any changes in the framework or language affects the entire application, making changes often expensive and time-consuming.
+
+		Lack of flexibility – A monolith is constrained by the technologies already used in the monolith.
+
+		Deployment – A small change to a monolithic application requires the redeployment of the entire monolith.
+
+		inventory(ims)
+			- Order - OrderController- OrderService- OrderRepoistory       
+			- Product
+			- Stock
+			- Supplier
+			- Notification
+	
+			inventory.jar  ---> server(inventory.jar) 
+
+Microservices Architecture:-
+		Microservices are unit of single functionality that are easly deployable, managable, 			testable and scalable
+
+			order-service - add / upate / delete / find order / findallorder
+				ordercontroller --> orderservice --orderrepsoitory --> orderdb
+				order.jar   ---> server(order.jar)	
+				build ---> deployment
+
+			product-service - add,update, find,delete
+				productcontroller --> productservice --productrepsoitory --> productdb
+				product.jar ---> server(product.jar)
+							---> server(product.jar)
+         
+			stock-service(.net)
+					productcontroller --> productservice --productrepsoitory --> productdb
+					stock.jar ---> server(stock.jar)
+			supplier-service(java)
+					
+			notfication-service
+
+		Advantages:-
+		Agility – Promote agile ways of working with small teams that deploy frequently.
+
+		Flexible scaling – If a microservice reaches its load capacity, 	
+						new instances of that service can rapidly be deployed to the accompanying 
+						cluster to help relieve pressure. 
+						We are now multi-tenanant and stateless with customers spread across multiple instances. 
+						Now we can support much larger instance sizes. 
+
+		Continuous deployment – We now have frequent and faster release cycles. 
+							Before we would push out updates once a week and now we can do so about two to 
+							three times a day. 
+
+		Highly maintainable and testable – Teams can experiment with new features and roll back if something doesn’t work. This makes it easier to update code and accelerates time-to-market for new features. Plus, it is easy to isolate and fix faults and bugs in individual services.
+
+		Independently deployable – Since microservices are individual units they allow for fast and easy independent deployment of individual features. 
+
+		Technology flexibility – Microservice architectures allow teams the freedom to select the tools they desire. 
+
+		High reliability – You can deploy changes for a specific service, without the threat of bringing down the entire application.
+
+	Microservice - single unit work
+				  - spring boot - Rest API - one microservice
+
+					product-microservice - Spring boot rest api project
+					customer-microservice -  Spring boot rest api project
+					order-microservice	-  Spring boot rest api project
+
+	Characterization of microservice:-
+						self-contained
+						independent services 
+						loosely coupled
+						scalable 
+						support continuous integration and deployment
+						Each microservice should manage the data on its own db
+						resilence
+						service - communicate - service
+						the services are registered & discoverable
+						centralized configuration for the microservices
+						Load Balancer
+						etc.,.
+	Distributed Microservices Architecture Problems:-
+			1. service to service communication problem - ip:port
+					Synchronous
+						RestTemplate - programmatic approach
+						Feign Client - declarative approach
+
+					Asynchronous
+						webclient
+
+			2. services should be discoverable
+			3. load balancer
+			4. centralized config
+			5. gateway(all the request should via gateway api)
+			6. fault tolerance
+	Solve the problem:-
+		spring cloud 
+			1. Eureka Discovery Registry Service -
+				ip:port / discoverable
+				Feign client 
+				
+			2. Internal Load Balancer
+			4. spring cloug config  
+			5. spring cloud gateway api
+			6. reliance4j - Circuit Breaker 
+	Microservice Architecture
+		
+					- Service to service communication
+					- All services should be registered inside 1 registry those service will
+						be discovered via registry
+					- All the service needs to talk to another microservice via registry
+					- All the service configuration should be brought to a one external or central config
+					- circuit breaker to stop cascading failure while forwarding request to
+					   another microservice which is down
+						fault tolerate
+					-ms
+					- Tracing mechanism - to trace the request and responses in the call
+
+Problems in microservice distributed architecure:-
+=================================================
+		1.service to service - ip and port number is not right choice
+			Solution:
+			spring cloud:-
+								 
+			Eureka registry and discovery 
+				Eureka Server location-  http://localhost:8761/eureka
+				Eureka register as client - true / false
+				Eureka fetch registry - true / false 	
+
+
+				Eureka Server - maintains regitry
+					IP and port no of all microservices
+					add dependency  spring-boot-cloud-eureka-server
+					     - @EnableEurekaServer
+				Eureka Client	-
+				    - all the microservices are eureka clients
+				    - eureka client will register and deregister in eureka server registry
+				    - spring-boot-cloud-eureka-client dependency
+					    - @EnableDiscoveryClient
+	
+	
+
+					external config - cloud config server
+					circuit breaker - resilence4j
+					Gateway - spring cloud gateway API
+					distributed tracing - slueth, zipkins
+			
+					Spring boot - spring framework - microservice
+					To solve the above listed problem spring framework has one project
+					is called spring cloud project
+				
+					microservice - spring boot + spring cloud - completed
+					service to service - RestTemplate , FeignClient , WebClient - complete
+					registry and discovery - Netflix-eureka-service-discovery registry - complete
+					external config - spring cloud config - complete
+					circuit breaker - Spring circuit breaker - resilence4j- not completed
+					distributed tracing -  slueth and zipkin - incomplete
+					Gateway - Spring cloud gateway - completed
+					Demo:-
+
+					1. 3 - Microservices
+					2. service to service communication
+					3. Service registry and Discovery
+					4. Central or external config
+					5. Api gateway
+					
+			
+					3 microservices -> spring boot + rest api
+					1. microservice-a
+					2. microservice-b
+					3. microservice-c
+Microservice Implementation:										
+
+<properties>
+    <spring-cloud.version>2025.0.0</spring-cloud.version>
+</properties>
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>${spring-cloud.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+
+										Interanl service communication
+		client ---->	microservice-a ---> microservice-b
+		
+					1. Service to Service Communication
+						RestTemplate - predefined class
+									  - Http Reques
+					
+	Eureka Service Registry & Discovery:-
+		1. create Eureka-server as a seperate spring boot project
+		2. u need add dependency spring-cloud-starer-eureka-server
+					<dependency>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-starter-actuator</artifactId>
+					</dependency>
+					<dependency>
+						<groupId>org.springframework.cloud</groupId>
+						<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+					</dependency>
+		3. Goto the euerka-server application main method class and add one annotation
+				@EnableEurekaServer
+	Eureka - client 
+
+		1. Spring boot user-service has to be made as a client
+				u need a dependency 
+				<dependency>
+						<groupId>org.springframework.cloud</groupId>
+						<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+				</dependency>
+		2. Goto the user microservice application main method class and add one annotation
+				@EnableDiscoverClient
+
+
+
+		Open Feign using service to service communication
+			1. Add a feign client open feign depdendecy
+						<dependency>
+							<groupId>org.springframework.cloud</groupId>
+							<artifactId>spring-cloud-starter-openfeign</artifactId>
+							<version>4.2.0</version>
+						</dependency>
+			2. u have to add one annotation
+				Open the main method class and enable  @EnableFeignClients
+			
+			4. u have to create an interface with ncessary methods - make an connection 2 microservices
+				
+					@FeignClient(name="MICROSERVICE-B")
+					public interface OpenFeighnInterface {
+						@GetMapping("/service-b") 
+						public String getData(); 
+					
+					}
+
+
+
+
+
+	1.Service to service communication
+			
+			RestTemplate -  programming approach - one service an talk to an other ms through ipaddress and port no						- it is not
+
+			Open Feign - Declarative apparoach
+						what to do you want
+
+
+	Api gateway 
+			create one spring boot project
+			add spring cloud gateway api, actuator,devtool,eureka-client dependency
+
+
+	Problem statement:-
+			managing the configuration. Externalize the configuration. 
+			Github - externalize your config
+			Solution:-
+			spring cloud - spring cloud config
+				     - server / client
+
+			spring cloud config Server - create an seperate spring boot project
+			Client
+
+				
+			
+	Server Config:-
+			
+			1. git hub repository and write application-name.properties file
+
+				
+			2. Spring cloud config server -> pull the properties file from the github
+				spring boot application
+				add dependency 
+				<dependency>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-config-server</artifactId>
+				</dependency>
+				<dependency>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-actuator</artifactId>
+				</dependency>
+			3. goto the main method of the application added @EnableConfigServer
+			4. goto the application.properties cloud config server
+																																															spring.cloud.config.server.git.uri=https://github.com/rajeshn6/mscommonconfiguration
+					#config server has pulled application.properties  file from the repo
+					management.endpoints.web.exposure.include=*
+					spring.cloud.config.server.git.skipSslValidation=true
+					spring.cloud.config.server.git.clone-on-start=true
+					management.endpoints.web.exposure.include=*
+			
+			3. Spring cloud config client 
+
+				
+				<dependency>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-config-client</artifactId>
+					<version>4.2.1</version>
+				</dependency>
+			4. Inside the every client microservice application.properties:
+				spring.config.import=optional:configserver:http://localhost:8083
+				spring.jackson.serialization.indent-output= true
+				
+
+Adding circuit breaker using resilence4j:-
+		
+		1. Add the dependencies
+				<dependency>
+   					<groupId>io.github.resilience4j</groupId>
+   					<artifactId>resilience4j-spring-boot3</artifactId>
+   					<version>2.0.2</version>
+ 				</dependency>
+ 				<dependency>
+   					<groupId>org.springframework.boot</groupId>
+   					<artifactId>spring-boot-starter-aop</artifactId>
+ 				</dependency>	
+				<dependency>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-actuator</artifactId>
+				</dependency>
+		2. Add yml configuration
+							
+				management:
+ 				 endpoints.web.exposure.include:
+   				 - '*'
+  				endpoint.health.show-details: always
+  				health.circuitbreakers.enabled: true
+
+				resilience4j.circuitbreaker:
+  				configs:
+    					default:
+      				registerHealthIndicator: true
+      				slidingWindowSize: 10
+      				minimumNumberOfCalls: 5
+      				permittedNumberOfCallsInHalfOpenState: 3
+      				automaticTransitionFromOpenToHalfOpenEnabled: true
+      				waitDurationInOpenState: 5s
+				      failureRateThreshold: 50
+      				eventConsumerBufferSize: 10
+		3. add a circuit breaker in service to service communication call
+				@GetMapping("/service-a/find")
+				@CircuitBreaker(name = "servicea-bcb",fallbackMethod = "failure")
+				public String getMethodName() {
+					String data =openFeighnInterface.getData();//MICROSERVICE-B/service-b
+					System.out.println(data);
+					return "service a made a call service b the response is: "+data;
+				}
+				public String failure(Throwable throwable) {
+					return "Right now microservice-b is not available try after sometime";
+				}
+
+		Api Gateway:-
+			Step 1:create spring boot project with name api-gateway
+			Step 2: add dependency 
+				<dependency>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-webflux</artifactId>
+				</dependency>
+				<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-gateway-server-webflux -->
+				<dependency>
+    					<groupId>org.springframework.cloud</groupId>
+    					<artifactId>spring-cloud-starter-gateway-server-webflux</artifactId>
+    					<version>4.3.1</version>
+				</dependency>
+				<dependency>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-actuator</artifactId>
+				</dependency>
+				<dependency>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+				</dependency>
+				devtools dependency
+			Step 3:
+				@Configuration
+				public class RouteConfig {
+				@Bean
+				RouteLocator routes(RouteLocatorBuilder builder) {
+				return builder.routes()
+				.route("USER-SERVICE",
+						r -> r.path("/user-api/**").uri("lb://USER-SERVICE"))
+				.route("MECHANIC-SERVICE",
+						r -> r.path("/mechanic-api/**").uri("lb://MECHANIC-SERVICE"))
+				.route("BOOKING-SERVICE",
+						r -> r.path("/booking-api/**").uri("lb://BOOKING-SERVICE"))
+				.build();
+				}
+
+				}	
+
+			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
+
+
+Logging:-
+			used to keep track execution of the code 
+			debug of your application
+			Logging framework:-
+			1. Logger - log type, log level - record the information	
+					// Logging various log level messages
+       	 		logger.trace("Log level: TRACE");
+        		logger.info("Log level: INFO");
+        		logger.debug("Log level: DEBUG");
+        		logger.error("Log level: ERROR");
+        		logger.warn("Log level: WARN");
+			2. Appender /  Handler - the place where to record the information - console, file system, database
+			3. Formatter - the format you want to record the information
+
+
+			logging in java:-
+				1. java.util.Logging - Basic logging 
+				2. Logback framework - spring boot application default logging framework
+				3. Log4j2 framework
+				4. etc.,.
+
+In java 8 Features:-
+===================
+		Interface:-
+			- Abstarction
+			- Upto java 7 an interface can have only public abstract methods
+			  And final static variable
+			- On or After java 8 interfaces can also have implemented methods inside the 
+			  interface
+			why java 8 allows implemented method inside the interface 
+		
+		Functional Interface:-
+			An interface should have only one abstract method and zero or more implemented
+			methods or fields are called functional interface
+
+			1. Userdefined Functional Interface
+					Pay
+			2. Predefined functional Interfaces
+					Comparable - java.lang.Comparable
+						int compareTo(T t), 
+					Comparator - java.util.Comparator
+						int compare(O o1,O o2), 
+					Runnable - java.lang.Runnable
+							void run();
+					Predicate - java.util.function.Predicate 
+						 boolean test(T t);
+					Consumer - java.util.function.Consumer
+						 void accept(T t);
+					Function - java.util.function.Function
+						 R apply(T t);
+					Supplier - java.util.function.Supplier
+						 T get();
+
+		Lambda Expression
+					c=a+b; // expression
+					functions in java . If the same java function can be written as 
+					an expression format.
+						
+					public void add(){// java function
+					}
+			
+					a=()->{} - Lambda expression
+
+					public void add(int a,int b){// java function
+						return a+b;
+					}
+					
+					c=(a,b)->a+b;
+					
+					Lamda Expression -> is nothing but it an implemenatation of one java	
+										abstract function from functional interface
+
+					Rules for writing lamda
+					1. remove annotation
+					2. remove access / non access modfier
+					3. remove return type
+					5. parameter also remove types
+					6. one arg then bracket
+					7. more than arg dont remove
+					8. add an lamda operator -> after the parameter
+					9. lamda body only one statement {}
+					10. lamda body only one statement that to it is an return
+						statement then remove return keyword
+					
+					
+						boolean test(String t);
+					    boolean result=t->t>10;
+							
+				
+					
+		@FunctionalInterface
+		public interface Predicate<String> {		
+    			boolean test(String t);
+		}				
+		Stream API
+
+
+				T - Float
+			public interface Comparable<Float> {
+				 public int compareTo(Float o);
+			}
+
+
+
+html:-
+=====
+	documentation
+	collections of html predefined elements or tag
+			<html>
+			<head>
+			<body>
+			<h1>
+			<p>
+			<form>
+			<input>
+			<article>
+			<aside>
+			<audio>
+			<video>
+	rules to write element or tags in html
+		1. only html predefined elements or tag
+		2. some html elements will have start tag and end tag
+					<element> - start tag
+					</element> - end tag
+		3. html elements contains
+					<p></p>
+					1. attribute(s)
+						<p align="center" style="color:red" id="" class=""></p>	
+					2. text content
+						<p>This is rajesh from chennai</p>
+					3. nested other html elements
+						<p>
+							<div></div>
+							<aside></aside>							
+						</p>
+		4. html elements should be written in lowercase 
+					
+		5. some html elements are self closing tag
+					<br/>
+					<hr/>
+
+			attribute zero or more attribute
+					attribute -> name=value
+				
+			<elementname attributename=value></elementname>
+			
+				<h1></h1>
+
+				
+				
+				<html>
+					<head></head>
+					<body></body>
+				</html>
+				<h1>dhkjfshd sdfhsdkjfhsdkj dsfdskj</h1>
+				<p>jfkjdf sdfbskjdfhbkjk s dsfbjsdh</p>
+				<h2></h2>
+
+
+		Broswer - html parser will parses the html document content
+		- constructs an equivelent DOM tree struture for the paresed html document
+
+
+
+
+
+===================================================================================================
+html -  basic of html, attribute
+css -  Applying styles for html elements 
+	   
+		selector {
+			name:value;       - style property - style rule
+			name:value;		 
+			name:value;
+		}
+	
+
+		Selector - the style rules need to get applied what and which html element
+		css selector types:-
+		-------------------
+		1. element selector
+		2. class selector (.)
+		3. id selector (#)
+		4. multiple selector
+		5. descended selector
+		6. universal selector
+		7. css attribute selector
+		8. sudo selector
+
+js - variable:-
+==============
+	js --> javascript Engine --> Browser
+				     node js
+	Inline 
+	internal
+	external 
+	datatype 
+			   - primitive type
+				 number,string,null,undefined,boolean
+			   - composite types or reference type
+				 Array, Object, Date etc
+	js is not strict type language - DYNAMIC TYPING
+
+	 array - []	
+		 var a=[23,56,46,787];
+		 
+
+		iterate an array, manuplation . add an element, 
+		delete an element, filter an element
+
+	 object - {}
+				- object will have properties and behaviour
+
+				iterate an object, entries, keys, values
+	 methods
+		-> function declaration
+				 function add(a,b){  
+                			return a+b;
+        			 }
+		-> function expression	
+				var x=function add(a,b){  
+                 		return a+b;
+        			}
+		-> anonymous function
+				var x=function(a,b){ 
+                 		return a+b;
+        			}
+		
+		-> Arrow function
+				var x=(a,b)=> a+b;
+	
+	
+		function can be assigned to a variable
+
+	 callback methods:-
+			
+
+	 callback hell:-
+
+	 Event handling
+				event source
+				event action listener
+
+	 Exception Handling - try catch finally
+	 Dom Manuplate - getElementById, byName, byTag, querySelector, querySelectorAll
+			create an one element attach with the exisiting DOM tree
+			Remove element from the DOM Tree
+			add or remove an attribute
+			add or remove a text node
+			add or remove style rules
+JavaScript provides a comprehensive set of methods for interacting with and manipulating the Document Object Model (DOM), allowing dynamic changes to the structure, content, and style of web pages.
+1. Element Selection Methods:
+	document.getElementById('id'): Selects a single element by its unique ID.
+	document.getElementsByClassName('className'): Returns an HTMLCollection of elements with a specific class name.
+	document.getElementsByTagName('tagName'): Returns an HTMLCollection of elements with a specific tag name.
+	document.querySelector('selector'): Returns the first element that matches a CSS selector.
+	document.querySelectorAll('selector'): Returns a NodeList of all elements that match a CSS selector.
+2. Element Creation and Insertion Methods:
+	document.createElement('tagName'): Creates a new HTML element.
+	parentNode.appendChild(childNode): Adds a child node to the end of a parent node's list of children.
+	parentNode.insertBefore(newNode, referenceNode): Inserts a new node before a specified reference node as a child of a parent node.
+	element.insertAdjacentHTML('position', htmlString): Inserts HTML content at a specified position relative to an element.
+3. Element Removal Methods:
+	parentNode.removeChild(childNode): Removes a specified child node from the DOM.
+	element.remove(): Removes the element itself from the DOM.
+4. Content and Attribute Manipulation Methods:
+	element.innerHTML: Gets or sets the HTML content within an element.
+	element.textContent: Gets or sets the text content of an element, stripping out any HTML tags.
+	element.setAttribute('attributeName', 'value'): Sets the value of an attribute on an element.
+	element.getAttribute('attributeName'): Gets the value of a specified attribute.
+	element.removeAttribute('attributeName'): Removes a specified attribute from an element.
+5. Style Manipulation Methods:
+	element.style.propertyName: Directly accesses and modifies individual CSS properties of an element.
+	element.classList.add('className'): Adds a class to an element's class list.
+	element.classList.remove('className'): Removes a class from an element's class list.
+	element.classList.toggle('className'): Toggles a class on and off.
+	element.classList.contains('className'): Checks if an element has a specific class.
+6. Event Handling Methods:
+	element.addEventListener('eventType', handlerFunction): Attaches an event listener to an element.
+	element.removeEventListener('eventType', handlerFunction): Removes an event listener from an element.
+	 
+	ES 6 - let, const, spread, Rest, Destructing an array, Destructure an js object, modules, classes, promises
+
+	
+	 typescript
+		
+     react
+	
+
+	
+
+	 Advanced JS
+		- classes
+		- object
+
+		- dynamic type - no datatype is needed to mentioned in the variable
+	
+		mavan - 
+		gradle - 
+
+===========================================================================================================================================		
+React:-
+		The library for web and native user interfaces
+		Create user interfaces from components
+		React lets you build user interfaces out of individual pieces called components. 
+		Create your own React components like navbar, footer,image gallery, Thumbnail, LikeButton, and Video. 
+		Then combine them into entire screens, pages, and apps.
+
+		
+		node js - Install the Environment
+		npm - node package manager     --- mvn
+
+		npx create-react-app appname
+		
+		js --> js engine(Engine)
+			   node js
+
+
+==================================================
+build tool - vite
+		npm create vite@latest
+		
+		cd projectfolder
+
+		npm install - node modules - node modules is going to have dependencies that are needed to 
+									 write, compile, run, test , deploy react application
+								   - package.json
+		npm run dev
+===================================================
+html
+	element 
+	html 5 - section, haeder, navbar, video, audio
+	attribute
+	forms - all input controls
+	
+css
+	style rule
+	types of stylesheet
+		1. inline
+		2. internal
+		3. external 
+
+	css selector - element, id, class, etc
+	
+	Bootstrap frameworks
+	
+js
+	datatypes
+	js array and objects
+	how to iterate array vs object
+	Arrays method
+	Object method
+	functions
+		1. nammed function
+			function name(){
+			}
+			let x= function name(){
+			}
+		2. anonymous function
+			
+			let x= function(){ 
+			}
+
+			let y=()=>{   v// arrow function
+			}
+	map function
+	filter function
+	Dom Tree
+	DOM manipulation method
+	event handling
+	ES-6 let,const,destructuring, spread, rest operator
+
+	JavaScript Object Destructuring is the syntax for extracting values from an object property and assigning them to a variable. 
+	The destructuring is also possible for JavaScript Arrays.
+
+	spread operator	
+		Spread syntax helps us clone an object with the most straightforward syntax using the curly braces and three dots {...}.
+		With spread syntax we can clone, update, and merge objects in an immutable way.
+		spread syntax helps expand or spread elements and properties
+	Rest Operator:-
+		The Rest parameter is kind of opposite to the spread syntax. While spread syntax helps expand or spread elements and properties, 
+		the rest parameter helps collect them together.		
+		const {age, ...rest} = user;
+ts
+
+react
+
+
+javascript vs typescript
+
+JavaScript:
+Uses dynamic typing, meaning the type of a variable is determined at runtime. 
+This can lead to runtime errors and makes large projects harder to maintain. 
+			let x;
+			x=10; //number
+			x='cts' //string
+			x=false //boolean
+
+		Event handling:-
+		===============	
+				Event Source
+				Event object - type of event
+				Event Action Listener 
+
+				When user interacts with the web pages events will get created
+				Add an action Listener
+				Button
+				Click  --> onclick --> java script (ActionListener)
+
+				<button onclick="buttonClicked()">Click</button>
+			
+				function buttonClicked(){
+						//action
+				}
+
+				dropdown --> onchange ---> java script (ActionListener)
+
+				key --> keyup -->  java script (ActionListener)
+				
+
+TypeScript:
+	ts is a superset of js
+
+	Uses static typing, which means the type of a variable is checked at compile time. 
+	This helps catch errors early and improves code robustness. 
+				
+	let x:number;      variable:datatype=value
+	x=10; //ok
+	x='cts' - error //string
+	x=false -  error //boolean
+	
+	js ----> js engine(Browser) ----> output
+
+		
+		    (Babel)    
+	ts-----> transpiler -----> js -----> js Engine(Browser)----> output
+			(tsc)
+
+typescript:- (OOP)
+	1. static typing 
+	2. interface
+	3. classes
+	4. Enum
+	5. Generics
+	6. Union 
+	7. Type Guards
+	8. Type Inference
+			let x;
+			x=40; //number
+	9.  Optional Chaining
+	10. Decorators (Angular)
+			
+============================================================
+React JS:-
+		js class | function returns html => jsx
+		ts class | function returns html -> tsx
+
+JSX(Javascript XML) - html + javascript 
+			  - always always return on html root element
+			  - jsx - javascript xml --> html + javascript
+						funtion demo(){	
+						  return  <>
+								<p>lorem</p>
+								{js script}
+								<p>lorem</p>
+						   	</>
+						}
+								
+			  - tsx - typescript xml --> html + typescript	
+						  funtion demo(){	
+						   <>
+							<p>lorem</p>
+							{ts script}
+							<p>lorem</p>
+						   </>
+						}
+react -> js
+	  -> typescript 
+
+		
+		javascript:-
+				dynamic type - need not to tell the datatype of any variable
+				var a;
+				a=10; //determine in type
+		
+		typescript:-
+				superset of js
+				static type - u must defined datatype while creating a variable
+			
+				let a:number=10;
+				name:string='rajesh'
+				
+				int a=10;
+
+
+React JS:-
+	Prerequiste:-
+		1. js knowledge
+		Installed:-
+		1. Node js
+		2. NPM 
+		We used to create
+React Component:-
+===============	
+	React is an component based liberary used to build user interfaces
+	(front end application)
+	build user interfaces out of individual pieces called components
+	Component = UI + State(Data)
+			Header Component -> UI(html,css,js) + state 
+			ContentComponent -> UI + state
+	UI 
+		static content (html)
+		dynamic content (js / ts - props and State(Data))
+
+	Virtual DOM in react js. How virtual DOM improves the performance 
+
+Types of component in react:-
+============================
+		1. functional component -> 
+			if u create a component using an function that return one portion of ui in jsx/tsx
+		2. class component	-> 
+			create an component using an typescript class that has render method 
+			that returns one portion of ui in jsx/tsx
+		
+Devops:-
+=======	
+angular - front end app
+microservice - beack end app	
+				Maven
+	
+	mechanic-service ----> Build ----> mechanic-service.jar -----> deploy -----> Server
+										     Physical Server
+										     Virtual Server
+										     Docker container
+	
+
+				  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
